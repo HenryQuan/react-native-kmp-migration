@@ -17,7 +17,6 @@ import { FilterUseCase, ShipAdditional, ShipAdditionalServiceJS } from "kmp-migr
 
 function HomeScreen(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
