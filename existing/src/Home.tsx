@@ -22,8 +22,8 @@ function HomeScreen(): React.JSX.Element {
   };
   const navigator = useNavigation();
   const service = new ShipAdditionalServiceJS();
-  const [shipAdditional, setShipAdditional] = useState(new Map<string, ShipAdditional>());
-  const [filterUseCase, setFilterUseCase] = useState(null);
+  const [shipAdditional, setShipAdditional] = useState<ReadonlyMap<string, ShipAdditional>>();
+  const [filterUseCase, setFilterUseCase] = useState<FilterUseCase>();
 
   // 
   useEffect(() => {
