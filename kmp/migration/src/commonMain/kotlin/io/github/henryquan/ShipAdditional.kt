@@ -8,8 +8,8 @@ typealias ShipAdditionalMap = Map<String, ShipAdditional>
 @JsExport
 @Serializable
 data class ShipAdditional (
-    val alphaPiercingHE: Double,
-    val sigma: Double,
+    val alphaPiercingHE: Double?,
+    val sigma: Double?,
     val consumables: List<List<ShipConsumable>>
 )
 

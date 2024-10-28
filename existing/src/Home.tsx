@@ -1,15 +1,19 @@
 import {useNavigation} from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Button,
   SafeAreaView,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TextInput,
   useColorScheme,
   View,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+// type hint doesn't seem to work somehow
+import { FilterUseCase, ShipAdditional, ShipAdditionalServiceJS } from "kmp-migration";
 
 function HomeScreen(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -18,6 +22,22 @@ function HomeScreen(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   const navigator = useNavigation();
+  const service = new ShipAdditionalServiceJS();
+  const [shipAdditional, setShipAdditional] = useState(new Map<string, ShipAdditional>());
+  const [filterUseCase, setFilterUseCase] = useState(null);
+
+  // 
+  useEffect(() => {
+    service.getShipAdditionalPromise().then((result) => {
+      console.log('getShipAdditionalPromise is finished');
+      // see https://kotlinlang.org/docs/js-to-kotlin-interop.html#kotlin-types-in-javascript
+      setShipAdditional(result.asJsReadonlyMapView());
+      setFilterUseCase(new FilterUseCase(result));
+    }).catch((error) => {
+      console.error('getShipAdditionalPromise', error);
+    });
+  }, []);
+  //
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -38,14 +58,34 @@ function HomeScreen(): React.JSX.Element {
           />
         </View>
       </View>
+      <TextInput placeholder='Filter by alphaPiercingHE' onChangeText={(text) => {
+        const result = filterUseCase?.filterHEPen(Number(text));
+        console.log('filterHEPen', result);
+      }} />;
+      <ScrollView style={{height: "100%"}}>
+        {shipAdditionalList(shipAdditional)}
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
+function shipAdditionalList(shipAdditional: Map<string, ShipAdditional>): React.JSX.Element {
+  const li = [];
+  shipAdditional.forEach((key, value) => {
+    const keyString = key.toString();
+    li.push(
+      <View key={keyString} style={{padding: 8}}>
+        <Text>{keyString}</Text>
+        <Text>{value.toString()}</Text>
+      </View>
+    );
+  });
+
+  return li;
+}
+
 const styles = StyleSheet.create({
   centerView: {
-    height: '100%',
-    justifyContent: 'center',
     alignItems: 'center',
   },
   centerText: {

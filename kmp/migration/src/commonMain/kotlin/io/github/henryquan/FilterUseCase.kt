@@ -11,12 +11,14 @@ class FilterUseCase(
 ) {
     fun filterSigma(sigma: Double): List<String> {
         return additionalMap.mapNotNull { (key, value) ->
+            value.sigma ?: return@mapNotNull null
             if (value.sigma >= sigma) key else null
         }
     }
 
     fun filterHEPen(pen: Double): List<String> {
         return additionalMap.mapNotNull { (key, value) ->
+            value.alphaPiercingHE ?: return@mapNotNull null
             if (value.alphaPiercingHE >= pen) key else null
         }
     }

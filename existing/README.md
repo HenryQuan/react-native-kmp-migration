@@ -1,3 +1,21 @@
+# Existing React Native
+This project acts as a template for existing React Native projects. To make it work with Kotlin Multiplatform via Kotlin JS, you need to add two new dependencies to your project:
+```bash
+npm install web-streams-polyfill react-native-fast-encoder --save
+```
+Then, add the following code to your `index.js` file:
+```javascript
+import { ReadableStream as ReadableStreamPolyfill } from 'web-streams-polyfill';
+import TextEncoder from 'react-native-fast-encoder';
+
+if (typeof window !== 'undefined') {
+  window.ReadableStream = ReadableStreamPolyfill;
+  window.TextDecoder = TextEncoder;
+}
+```
+
+## Default README
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started

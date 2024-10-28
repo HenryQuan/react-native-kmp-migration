@@ -52,6 +52,7 @@ def patch_service(path: str):
 
 if __name__ == '__main__':
     import sys
+    import shutil
     # run gradlew :service:jsProductionRun and patch
     print('Running gradlew :migration:jsProductionRun')
 
@@ -61,3 +62,9 @@ if __name__ == '__main__':
     gradlew_task = subprocess.run([gradlew, ':migration:jsProductionRun'], capture_output=True)
     gradlew_task.check_returncode()
     patch_service('build/js/packages/kmp-migration/kotlin/ktor-ktor-client-core.mjs')
+
+    # lastly move to ../existing/3rd
+    print('Moving to ../existing/3rd')
+    # clear the existing folder
+    shutil.rmtree('../existing/3rd/kmp-migration', ignore_errors=True)
+    shutil.move('build/js/packages/kmp-migration', '../existing/3rd/kmp-migration')

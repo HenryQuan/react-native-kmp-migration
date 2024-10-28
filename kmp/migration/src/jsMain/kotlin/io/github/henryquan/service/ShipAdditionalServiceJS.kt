@@ -11,7 +11,7 @@ import kotlin.js.Promise
 // https://github.com/wowsinfo/PersonalRatingService/issues/1
 
 @JsExport
-@JsName("ShipAdditionalService")
+//@JsName("ShipAdditionalService")
 class ShipAdditionalServiceJS: ShipAdditionalService() {
 
     fun getShipAdditionalPromise(): Promise<ShipAdditionalMap> = promiseScope {
