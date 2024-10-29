@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Button,
   SafeAreaView,
@@ -12,8 +12,7 @@ import {
   View,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-// type hint doesn't seem to work somehow
-import { FilterUseCase, ShipAdditional, ShipAdditionalServiceJS } from "kmp-migration";
+import ShipAdditionalList, {useShipAdditional} from './ShipAdditional';
 
 function HomeScreen(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -21,22 +20,10 @@ function HomeScreen(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   const navigator = useNavigation();
-  const service = new ShipAdditionalServiceJS();
-  const [shipAdditional, setShipAdditional] = useState<ReadonlyMap<string, ShipAdditional>>();
-  const [filterUseCase, setFilterUseCase] = useState<FilterUseCase>();
+  const {shipAdditional, filterUseCase} = useShipAdditional();
+  const [filteredList, setFilteredList] = useState<readonly string[]>([]);
 
-  // 
-  useEffect(() => {
-    service.getShipAdditionalPromise().then((result) => {
-      console.log('getShipAdditionalPromise is finished');
-      // see https://kotlinlang.org/docs/js-to-kotlin-interop.html#kotlin-types-in-javascript
-      setShipAdditional(result.asJsReadonlyMapView());
-      setFilterUseCase(new FilterUseCase(result));
-    }).catch((error) => {
-      console.error('getShipAdditionalPromise', error);
-    });
-  }, []);
-  //
+  const hasFilterResult = () => filteredList.length > 0;
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -52,35 +39,40 @@ function HomeScreen(): React.JSX.Element {
           <Button
             title="Go to complex screen"
             onPress={() => {
+              //@ts-ignore, how to fix?
               navigator.navigate('Complex');
             }}
           />
         </View>
       </View>
-      <TextInput placeholder='Filter by alphaPiercingHE' onChangeText={(text) => {
-        const result = filterUseCase?.filterHEPen(Number(text));
-        console.log('filterHEPen', result);
-      }} />;
-      <ScrollView style={{height: "100%"}}>
-        {shipAdditionalList(shipAdditional)}
+      <TextInput
+        placeholder="Filter by alphaPiercingHE"
+        onChangeText={text => {
+          const result = filterUseCase?.filterHEPen(Number(text));
+          const resultList = result?.asJsReadonlyArrayView();
+          setFilteredList(resultList ?? []);
+        }}
+      />
+      <Text>
+        {hasFilterResult()
+          ? 'Filtered result:'
+          : 'No filter result, showing all ships'}
+      </Text>
+      <ScrollView style={{height: '100%'}}>
+        {hasFilterResult() ? (
+          filteredList.map((key, index) => {
+            return (
+              <View key={key + index} style={{padding: 2}}>
+                <Text>{key}</Text>
+              </View>
+            );
+          })
+        ) : (
+          <ShipAdditionalList shipAdditional={shipAdditional} />
+        )}
       </ScrollView>
     </SafeAreaView>
   );
-}
-
-function shipAdditionalList(shipAdditional: Map<string, ShipAdditional>): React.JSX.Element {
-  const li = [];
-  shipAdditional.forEach((key, value) => {
-    const keyString = key.toString();
-    li.push(
-      <View key={keyString} style={{padding: 8}}>
-        <Text>{keyString}</Text>
-        <Text>{value.toString()}</Text>
-      </View>
-    );
-  });
-
-  return li;
 }
 
 const styles = StyleSheet.create({

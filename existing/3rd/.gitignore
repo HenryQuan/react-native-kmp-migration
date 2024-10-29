@@ -1,1 +1,4 @@
-kmp-migration
+kmp-migration/*
+!kmp-migration/kotlin
+kmp-migration/kotlin/*
+!kmp-migration/kotlin/kmp-migration.d.ts
