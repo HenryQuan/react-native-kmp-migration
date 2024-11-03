@@ -32,73 +32,79 @@ fun HomeScreen() {
     var filterText by remember { mutableStateOf(TextFieldValue("")) }
     var filteredList by remember { mutableStateOf<List<String>>(emptyList()) }
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Complex Screen") },
+    Scaffold(topBar = {
+        TopAppBar(
+            title = { Text("Complex Screen") },
+        )
+    }, content = { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .padding(16.dp)
+        ) {
+            // Main message
+            Text(
+                text = "Just consider this as an existing screen",
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+                style = MaterialTheme.typography.bodyMedium
             )
-        },
-        content = { innerPadding ->
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(innerPadding)
-                    .padding(16.dp)
-            ) {
-                // Main message
-                Text(
-                    text = "Just consider this as an existing screen",
-                    modifier = Modifier.align(Alignment.CenterHorizontally),
-                    style = MaterialTheme.typography.bodyMedium
-                )
 
-                // Navigation button
-                Button(
-                    onClick = {
-                        // Navigation to the complex screen
+            // Navigation button
+            Button(
+                onClick = {
+                    // Navigation to the complex screen
 //                        navController.navigate("React Native")
-                    },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 8.dp)
-                ) {
-                    Text("Go to complex screen")
-                }
+                }, modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp)
+            ) {
+                Text("Go to React Native")
+            }
 
-                // Text field for filtering
-                TextField(
-                    value = filterText,
-                    onValueChange = { newValue ->
+            // Text field for filtering
+            TextField(value = filterText,
+                onValueChange = { newValue ->
+                    if (newValue.text.isEmpty()) {
                         filterText = newValue
-                        val result = filterUseCase?.filterHEPen(newValue.text.toIntOrNull() ?: 0)
-                        filteredList = result ?: emptyList()
-                    },
-                    placeholder = { Text("Filter by alphaPiercingHE") },
-                    modifier = Modifier.fillMaxWidth()
-                )
-
-                // Filter result message
-                Text(
-                    text = if (filteredList.isNotEmpty()) "Filtered result:" else "No filter result, showing all ships",
-                    modifier = Modifier.padding(vertical = 8.dp)
-                )
-
-                // Display the list in a scrollable column
-                if (filteredList.isNotEmpty()) {
-                    LazyColumn(
-                        modifier = Modifier.fillMaxHeight()
-                    ) {
-                        items(filteredList) { item ->
-                            ListItem(
-                                modifier = Modifier.padding(2.dp),
-                                headlineContent = { Text(item) }
-                            )
-                        }
+                        filteredList = emptyList()
+                        return@TextField
                     }
-                } else {
-                    ShipAdditionalList(shipAdditional)
+
+                    // don't accept next line, remove \n
+                    if (newValue.text.contains("\n")) {
+                        filterText = TextFieldValue(newValue.text.replace("\n", ""))
+                        return@TextField
+                    }
+
+                    filterText = newValue
+                    val penInput = newValue.text.toIntOrNull() ?: 0
+                    val result = filterUseCase?.filterHEPen(penInput)
+                    filteredList = result ?: emptyList()
+                },
+                placeholder = { Text("Filter by alphaPiercingHE") },
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            // Filter result message
+            Text(
+                text = if (filteredList.isNotEmpty()) "Filtered result: ${filteredList.size}" else "No filter result, showing all ships",
+                modifier = Modifier.padding(vertical = 8.dp)
+            )
+
+            // Display the list in a scrollable column
+            if (filteredList.isNotEmpty()) {
+                LazyColumn(
+                    modifier = Modifier.fillMaxHeight()
+                ) {
+                    items(filteredList) { item ->
+                        ListItem(modifier = Modifier.padding(2.dp),
+                            headlineContent = { Text(item) })
+                    }
                 }
+            } else {
+                ShipAdditionalList(shipAdditional)
             }
         }
-    )
+    })
 }
