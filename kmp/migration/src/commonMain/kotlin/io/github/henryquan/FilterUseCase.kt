@@ -16,7 +16,7 @@ class FilterUseCase(
         }
     }
 
-    fun filterHEPen(pen: Double): List<String> {
+    fun filterHEPen(pen: Int): List<String> {
         return additionalMap.mapNotNull { (key, value) ->
             value.alphaPiercingHE ?: return@mapNotNull null
             if (value.alphaPiercingHE >= pen) key else null

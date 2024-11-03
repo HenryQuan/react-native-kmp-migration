@@ -17,21 +17,29 @@ import androidx.compose.ui.unit.dp
 import org.github.henryquan.nativeandroidkmp.ui.theme.AndroidKMPTheme
 
 class MainActivity : ComponentActivity() {
-    @OptIn(ExperimentalMaterial3Api::class)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             AndroidKMPTheme {
-                Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
-                    TopAppBar(title = { Text("Android KMP") })
-                }) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                HomeScreen()
             }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun AndroidKMPApp() {
+    AndroidKMPTheme {
+        Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
+            TopAppBar(title = { Text("Android KMP") })
+        }) { innerPadding ->
+            Greeting(
+                name = "Android",
+                modifier = Modifier.padding(innerPadding)
+            )
         }
     }
 }
