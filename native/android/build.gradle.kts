@@ -3,4 +3,8 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.compose.compiler) apply false
+
+    // include kmp plugins here also
+    alias(kmp.plugins.kotlinx.serialization).apply(false)
+    alias(kmp.plugins.kotlin.multiplatform).apply(false)
 }

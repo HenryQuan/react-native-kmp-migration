@@ -14,6 +14,11 @@ dependencyResolutionManagement {
             from(files("kmp.versions.toml"))
         }
     }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
 
 include(":migration")
