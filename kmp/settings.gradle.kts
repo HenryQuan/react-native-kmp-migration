@@ -8,4 +8,12 @@ pluginManagement {
     }
 }
 
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("kmp") {
+            from(files("kmp.versions.toml"))
+        }
+    }
+}
+
 include(":migration")

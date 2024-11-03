@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.kotlinx.serialization)
+    alias(kmp.plugins.kotlin.multiplatform)
+    alias(kmp.plugins.kotlinx.serialization)
 }
 
 kotlin {
@@ -27,26 +27,26 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.client.serialization)
-            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(kmp.ktor.client.core)
+            implementation(kmp.ktor.client.content.negotiation)
+            implementation(kmp.ktor.client.serialization)
+            implementation(kmp.ktor.serialization.kotlinx.json)
 
-            implementation(libs.kotlinx.serialization.json)
-            implementation(libs.kotlinx.coroutines.core)
+            implementation(kmp.kotlinx.serialization.json)
+            implementation(kmp.kotlinx.coroutines.core)
         }
         commonTest.dependencies {
-            implementation(libs.kotlin.test)
-            implementation(libs.kotlinx.coroutines.test)
+            implementation(kmp.kotlin.test)
+            implementation(kmp.kotlinx.coroutines.test)
         }
         jsMain.dependencies {
-            implementation(libs.ktor.client.js)
+            implementation(kmp.ktor.client.js)
         }
         jvmMain.dependencies {
-            implementation(libs.ktor.client.okhttp)
+            implementation(kmp.ktor.client.okhttp)
         }
         iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
+            implementation(kmp.ktor.client.darwin)
         }
 
         // JS requires this annotation to be exported

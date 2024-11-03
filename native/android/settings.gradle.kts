@@ -21,4 +21,14 @@ dependencyResolutionManagement {
 
 rootProject.name = "Android+KMP"
 include(":app")
- 
+
+// use the kmp module
+include(":kmp")
+project(":kmp").projectDir = file("../../kmp")
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("kmp") {
+            from(files("../../kmp/kmp.versions.toml"))
+        }
+    }
+}

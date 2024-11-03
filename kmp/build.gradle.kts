@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.kotlinx.serialization).apply(false)
-    alias(libs.plugins.kotlin.multiplatform).apply(false)
+    alias(kmp.plugins.kotlinx.serialization).apply(false)
+    alias(kmp.plugins.kotlin.multiplatform).apply(false)
 }
 
 // NOTE: use allprojects instead of subprojects here to avoid
