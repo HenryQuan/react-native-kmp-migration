@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.facebook.react)
 }
 
 android {
@@ -68,4 +69,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // react native
+    implementation(libs.react.android)
+    implementation(libs.hermes.android)
+}
+
+react {
+    root = file("../../../existing")
+    reactNativeDir = file("../../../existing/node_modules/react-native")
+    codegenDir = file("../../../existing/node_modules/react-native")
+    cliFile = file("../../../existing/node_modules/react-native/cli.js")
 }
