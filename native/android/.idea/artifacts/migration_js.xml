@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="migration-js">
-    <output-path>$PROJECT_DIR$/../../kmp/migration/build/libs</output-path>
-    <root id="archive" name="migration-js.jar">
-      <element id="module-output" name="Android+KMP.migration.jsMain" />
-    </root>
-  </artifact>
-</component>
