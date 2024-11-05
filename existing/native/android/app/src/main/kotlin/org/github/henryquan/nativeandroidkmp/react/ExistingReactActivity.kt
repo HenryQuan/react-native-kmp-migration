@@ -7,7 +7,7 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 
 class ExistingReactActivity : ReactActivity() {
 
-    override fun getMainComponentName(): String = "TODO"
+    override fun getMainComponentName(): String = "existing"
 
     override fun createReactActivityDelegate(): ReactActivityDelegate =
         DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)

@@ -1,5 +1,6 @@
 package org.github.henryquan.nativeandroidkmp
 
+import android.content.Intent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,14 +17,19 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import org.github.henryquan.nativeandroidkmp.react.ExistingReactActivity
+
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -31,6 +37,12 @@ fun HomeScreen() {
     val (shipAdditional, filterUseCase) = useShipAdditional()
     var filterText by remember { mutableStateOf(TextFieldValue("")) }
     var filteredList by remember { mutableStateOf<List<String>>(emptyList()) }
+    val activity = LocalContext.current as MainActivity
+
+    fun useLaunchReactNative() {
+        val intent = Intent(activity, ExistingReactActivity::class.java)
+        activity.startActivity(intent)
+    }
 
     Scaffold(topBar = {
         TopAppBar(
@@ -52,10 +64,7 @@ fun HomeScreen() {
 
             // Navigation button
             Button(
-                onClick = {
-                    // Navigation to the complex screen
-//                        navController.navigate("React Native")
-                }, modifier = Modifier
+                onClick = { useLaunchReactNative() }, modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp)
             ) {

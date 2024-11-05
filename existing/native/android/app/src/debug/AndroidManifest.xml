@@ -6,8 +6,6 @@
 
     <application
         android:name=".MainApplication"
-        android:usesCleartextTraffic="true"
-        tools:targetApi="28"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +13,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidKMP">
+        android:theme="@style/Theme.AndroidKMP"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="28">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -27,6 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".react.ExistingReactActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>

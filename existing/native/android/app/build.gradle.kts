@@ -36,7 +36,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -76,8 +76,9 @@ dependencies {
 }
 
 react {
-    root = file("../../../")
+    root = file("../../../../")
     reactNativeDir = file("../../../node_modules/react-native")
-    codegenDir = file("../../../node_modules/react-native")
+    codegenDir = file("../../../node_modules/@react-native/codegen")
     cliFile = file("../../../node_modules/react-native/cli.js")
+    autolinkLibrariesWithApp()
 }
