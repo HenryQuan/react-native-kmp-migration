@@ -20,3 +20,9 @@ Overall, this approach may the best for me, I can keep React Native while migrat
 reakt-native-toolkit enables you to share the native module using Kotlin Multiplatform, so you can write the native module in Kotlin and share it between Android and iOS for React Native. The rest three projects are using Kotlin/JS to implement a React Native component, so they are using things like `RComponent<RProps, AppState>()`.
 
 It is similar what I am doing here, but instead I only import my Kotlin/JS package and use it directly in my existing React Native project. There is a clear separation between the React Native and the Kotlin part.
+
+## Issues
+- In order to get React Native running in native projects, the project has to be inside a node project. Some dependencies are assuming that the Android/iOS folder is under a React Native folder. This makes sense, but means I have to place them under the existing project. It is not a big deal however
+    - This is a minus however due to this constraint
+    - Depending on the dependencies, it may work without placing them under a node project
+

@@ -76,8 +76,8 @@ dependencies {
 }
 
 react {
-    root = file("../../../existing")
-    reactNativeDir = file("../../../existing/node_modules/react-native")
-    codegenDir = file("../../../existing/node_modules/react-native")
-    cliFile = file("../../../existing/node_modules/react-native/cli.js")
+    root = file("../../../")
+    reactNativeDir = file("../../../node_modules/react-native")
+    codegenDir = file("../../../node_modules/react-native")
+    cliFile = file("../../../node_modules/react-native/cli.js")
 }
