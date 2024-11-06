@@ -1,3 +1,11 @@
+"""
+The reason for this script is to address the NINJA 260 character path limit in Windows.
+The script creates a virtual drive that maps to the current directory.
+This way, the path length is reduced to 2 characters (K: instead of the long path).
+The K: drive can be removed by using `subst K: /d` or running the script again.
+A system reboot will also remove the virtual drive.
+"""
+
 import os
 import subprocess
 
