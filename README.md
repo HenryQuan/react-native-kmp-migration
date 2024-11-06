@@ -21,8 +21,17 @@ reakt-native-toolkit enables you to share the native module using Kotlin Multipl
 
 It is similar what I am doing here, but instead I only import my Kotlin/JS package and use it directly in my existing React Native project. There is a clear separation between the React Native and the Kotlin part.
 
+# Other Kotlin Projects
+
+- https://github.com/HenryQuan/objc-swift-kotlin
+  - Compare performance between Kotlin, Swift, Objective-C and C at assembly level
+- https://github.com/HenryQuan/kmm-demo
+- https://github.com/HenryQuan/kotlin-cpp
+- https://github.com/wowsinfo/PersonalRatingService
+
 ## Issues
+
 - ~~In order to get React Native running in native projects, the project has to be inside a node project. Some dependencies are assuming that the Android/iOS folder is under a React Native folder. This makes sense, but means I have to place them under the existing project. It is not a big deal however~~
-    - This is a minus however due to this constraint
-    - Depending on the dependencies, it may work without placing them under a node project
-    - ***Update: this is no longer an issue if some patches are used, but make sure the path is correct***
+  - This is a minus however due to this constraint
+  - Depending on the dependencies, it may work without placing them under a node project
+  - **_Update: this is no longer an issue if some patches are used, but make sure the path is correct_**
