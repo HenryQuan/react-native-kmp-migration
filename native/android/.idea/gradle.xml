@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin" name="gradle-plugin-root">
+                <projects>
+                  <project path="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin" />
+                  <project path="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/react-native-gradle-plugin" />
+                  <project path="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/settings-plugin" />
+                  <project path="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/shared" />
+                  <project path="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/shared-testutil" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin" />
+            <option value="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/react-native-gradle-plugin" />
+            <option value="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/settings-plugin" />
+            <option value="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/shared" />
+            <option value="$PROJECT_DIR$/../../node_modules/@react-native/gradle-plugin/shared-testutil" />
+            <option value="$PROJECT_DIR$/../../node_modules/react-native-fast-encoder/android" />
+            <option value="$PROJECT_DIR$/../../node_modules/react-native-safe-area-context/android" />
+            <option value="$PROJECT_DIR$/../../node_modules/react-native-screens/android" />
+            <option value="$PROJECT_DIR$/../../../kmp/migration" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
