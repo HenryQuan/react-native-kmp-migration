@@ -76,9 +76,9 @@ dependencies {
 }
 
 react {
-    root = file("../../../../")
-    reactNativeDir = file("../../../node_modules/react-native")
-    codegenDir = file("../../../node_modules/@react-native/codegen")
-    cliFile = file("../../../node_modules/react-native/cli.js")
+    root = file("../../../existing/")
+    reactNativeDir = file("../../../existing/node_modules/react-native")
+    codegenDir = file("../../../existing/node_modules/@react-native/codegen")
+    cliFile = file("../../../existing/node_modules/react-native/cli.js")
     autolinkLibrariesWithApp()
 }

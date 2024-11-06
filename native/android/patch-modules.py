@@ -4,7 +4,7 @@ See ../README.md for more information.
 
 import os
 
-NODE_MODULES_DIR = "../../node_modules"
+NODE_MODULES_DIR = "../../existing/node_modules"
 
 
 def _read_file(file_path):
@@ -24,7 +24,7 @@ def patch_react_native_fast_encoder():
         for line in lines:
             if "-DNODE_MODULES_DIR" in line:
                 line = line.replace(
-                    "${rootDir}/../node_modules", "${rootDir}/../../node_modules"
+                    "${rootDir}/../node_modules", "${rootDir}/../../existing/node_modules"
                 )
                 print("Patched react-native-fast-encoder")
             file.write(line)
@@ -38,7 +38,14 @@ def patch_react_native_screens():
         for line in lines:
             if "rnsDefaultMinSdkVersion" in line:
                 line = line.replace("21", "24")
-                print("Patched react-native-screens")
+                print("Patched react-native-screens minSdkVersion")
+            if 'file("$rootDir/../node_modules/react-native/android")' in line:
+                line = line.replace(
+                    'file("$rootDir/../node_modules/react-native/android")',
+                    # this must point to the react-native android folder
+                    'file("$rootDir/../../existing/node_modules/react-native/android")',
+                )
+                print("Patched react-native-screens android path")
             file.write(line)
 
 
