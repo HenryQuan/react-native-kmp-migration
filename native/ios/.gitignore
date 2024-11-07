@@ -10,4 +10,5 @@ xcuserdata/
 *.dSYM
 
 build/
+Pods/
 .xcode.env*

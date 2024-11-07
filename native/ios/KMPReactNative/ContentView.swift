@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  KMP+RN
+//  KMPReactNative
 //
 //  Created by Yiheng Quan on 7/11/2024.
 //

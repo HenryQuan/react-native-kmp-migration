@@ -1,3 +1,7 @@
+# See https://github.com/CocoaPods/CocoaPods/issues/12583#issuecomment-2357470707
+# To fix the issue with RuntimeError - `PBXGroup` attempted to initialize an object with unknown ISA `PBXFileSystemSynchronizedRootGroup`
+# from attributes: `{"isa"=>"PBXFileSystemSynchronizedRootGroup", "path"=>"KMPReactNative", "sourceTree"=>"<group>"}`
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command("node", ["-p",
                                                  'require.resolve(
@@ -14,7 +18,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target "KMP+RN" do
+target "KMPReactNative" do
   config = use_native_modules!
   # need to update the reactNativePath to the correct path
   # config[:reactNativePath] = "../../existing/node_modules/react-native"
@@ -25,7 +29,7 @@ target "KMP+RN" do
     :app_path => "#{Pod::Config.instance.installation_root}/../../existing/",
   )
 
-  target "KMP+RNTests" do
+  target "KMPReactNativeTests" do
     inherit! :complete
     # Pods for testing
   end

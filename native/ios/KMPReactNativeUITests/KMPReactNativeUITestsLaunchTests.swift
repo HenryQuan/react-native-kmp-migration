@@ -1,13 +1,13 @@
 //
-//  KMP_RNUITestsLaunchTests.swift
-//  KMP+RNUITests
+//  KMPReactNativeUITestsLaunchTests.swift
+//  KMPReactNativeUITests
 //
 //  Created by Yiheng Quan on 7/11/2024.
 //
 
 import XCTest
 
-final class KMP_RNUITestsLaunchTests: XCTestCase {
+final class KMPReactNativeUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

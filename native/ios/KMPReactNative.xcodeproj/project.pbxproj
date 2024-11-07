@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		299997AD922F330CF093D1F2 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA22DF86FA25587BEEAA0DE2 /* libPods-KMPReactNative-KMPReactNativeTests.a */; };
+		2D932BD8A0B7641FA0517D8F /* libPods-KMPReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1C97D01EC010CEF18107E8 /* libPods-KMPReactNative.a */; };
+		924A8AE42CDCB49200096976 /* KMPReactNativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE12CDCB49200096976 /* KMPReactNativeUITests.swift */; };
+		924A8AE52CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE22CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift */; };
+		924A8AED2CDCB49300096976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE92CDCB49200096976 /* ContentView.swift */; };
+		924A8AEE2CDCB49300096976 /* KMPReactNativeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AEB2CDCB49200096976 /* KMPReactNativeApp.swift */; };
+		924A8AEF2CDCB49300096976 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924A8AE62CDCB49200096976 /* Preview Assets.xcassets */; };
+		924A8AF02CDCB49300096976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924A8AE82CDCB49200096976 /* Assets.xcassets */; };
+		924A8AF32CDCB49300096976 /* KMPReactNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AF12CDCB49300096976 /* KMPReactNativeTests.swift */; };
+		C24438563370F8A8CA6DA677 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		924A8A952CDCB3E000096976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 924A8A7B2CDCB3DF00096976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 924A8A822CDCB3DF00096976;
+			remoteInfo = KMPReactNative;
+		};
+		924A8A9F2CDCB3E000096976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 924A8A7B2CDCB3DF00096976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 924A8A822CDCB3DF00096976;
+			remoteInfo = KMPReactNative;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = ../PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6E5539C9907D73805C52FBA6 /* Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		924A8A832CDCB3DF00096976 /* KMPReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMPReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		924A8A942CDCB3E000096976 /* KMPReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		924A8A9E2CDCB3E000096976 /* KMPReactNativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPReactNativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		924A8AE12CDCB49200096976 /* KMPReactNativeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPReactNativeUITests.swift; sourceTree = "<group>"; };
+		924A8AE22CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPReactNativeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		924A8AE62CDCB49200096976 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		924A8AE82CDCB49200096976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		924A8AE92CDCB49200096976 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		924A8AEA2CDCB49200096976 /* KMPReactNative.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KMPReactNative.entitlements; sourceTree = "<group>"; };
+		924A8AEB2CDCB49200096976 /* KMPReactNativeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPReactNativeApp.swift; sourceTree = "<group>"; };
+		924A8AF12CDCB49300096976 /* KMPReactNativeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPReactNativeTests.swift; sourceTree = "<group>"; };
+		AB1C97D01EC010CEF18107E8 /* libPods-KMPReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMPReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83758A0832B9FA8622B1FA5 /* Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA22DF86FA25587BEEAA0DE2 /* libPods-KMPReactNative-KMPReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMPReactNative-KMPReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EADBBBC6265274799FB84125 /* Pods-KMPReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative.debug.xcconfig"; path = "Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative.debug.xcconfig"; sourceTree = "<group>"; };
+		EB96C84B850A154BAE764EEF /* Pods-KMPReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative.release.xcconfig"; path = "Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		924A8A802CDCB3DF00096976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D932BD8A0B7641FA0517D8F /* libPods-KMPReactNative.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924A8A912CDCB3E000096976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299997AD922F330CF093D1F2 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924A8A9B2CDCB3E000096976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59AB644FA6FCE8D4B1A3153B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C97D01EC010CEF18107E8 /* libPods-KMPReactNative.a */,
+				EA22DF86FA25587BEEAA0DE2 /* libPods-KMPReactNative-KMPReactNativeTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A49A89DE0B2E04DA7E139A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EADBBBC6265274799FB84125 /* Pods-KMPReactNative.debug.xcconfig */,
+				EB96C84B850A154BAE764EEF /* Pods-KMPReactNative.release.xcconfig */,
+				6E5539C9907D73805C52FBA6 /* Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig */,
+				B83758A0832B9FA8622B1FA5 /* Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		924A8A7A2CDCB3DF00096976 = {
+			isa = PBXGroup;
+			children = (
+				924A8AEC2CDCB49200096976 /* KMPReactNative */,
+				924A8AF22CDCB49300096976 /* KMPReactNativeTests */,
+				924A8AE32CDCB49200096976 /* KMPReactNativeUITests */,
+				924A8A842CDCB3DF00096976 /* Products */,
+				7A49A89DE0B2E04DA7E139A2 /* Pods */,
+				59AB644FA6FCE8D4B1A3153B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		924A8A842CDCB3DF00096976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				924A8A832CDCB3DF00096976 /* KMPReactNative.app */,
+				924A8A942CDCB3E000096976 /* KMPReactNativeTests.xctest */,
+				924A8A9E2CDCB3E000096976 /* KMPReactNativeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		924A8AE32CDCB49200096976 /* KMPReactNativeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				924A8AE12CDCB49200096976 /* KMPReactNativeUITests.swift */,
+				924A8AE22CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift */,
+			);
+			path = KMPReactNativeUITests;
+			sourceTree = "<group>";
+		};
+		924A8AE72CDCB49200096976 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				924A8AE62CDCB49200096976 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		924A8AEC2CDCB49200096976 /* KMPReactNative */ = {
+			isa = PBXGroup;
+			children = (
+				924A8AE72CDCB49200096976 /* Preview Content */,
+				924A8AE82CDCB49200096976 /* Assets.xcassets */,
+				924A8AE92CDCB49200096976 /* ContentView.swift */,
+				924A8AEA2CDCB49200096976 /* KMPReactNative.entitlements */,
+				924A8AEB2CDCB49200096976 /* KMPReactNativeApp.swift */,
+				206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */,
+			);
+			path = KMPReactNative;
+			sourceTree = "<group>";
+		};
+		924A8AF22CDCB49300096976 /* KMPReactNativeTests */ = {
+			isa = PBXGroup;
+			children = (
+				924A8AF12CDCB49300096976 /* KMPReactNativeTests.swift */,
+			);
+			path = KMPReactNativeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		924A8A822CDCB3DF00096976 /* KMPReactNative */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 924A8AA82CDCB3E000096976 /* Build configuration list for PBXNativeTarget "KMPReactNative" */;
+			buildPhases = (
+				7EA712E420E596EDE616F09C /* [CP] Check Pods Manifest.lock */,
+				924A8A7F2CDCB3DF00096976 /* Sources */,
+				924A8A802CDCB3DF00096976 /* Frameworks */,
+				924A8A812CDCB3DF00096976 /* Resources */,
+				CA4D08256FB48944C17BBE87 /* [CP] Embed Pods Frameworks */,
+				73E5375DB19C99223F06735C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMPReactNative;
+			productName = KMPReactNative;
+			productReference = 924A8A832CDCB3DF00096976 /* KMPReactNative.app */;
+			productType = "com.apple.product-type.application";
+		};
+		924A8A932CDCB3E000096976 /* KMPReactNativeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 924A8AAB2CDCB3E000096976 /* Build configuration list for PBXNativeTarget "KMPReactNativeTests" */;
+			buildPhases = (
+				231DA6DEEC7CB3D19AB006F9 /* [CP] Check Pods Manifest.lock */,
+				924A8A902CDCB3E000096976 /* Sources */,
+				924A8A912CDCB3E000096976 /* Frameworks */,
+				924A8A922CDCB3E000096976 /* Resources */,
+				5908BB8002D7F352A449349C /* [CP] Embed Pods Frameworks */,
+				41328C94F5D1488701D23718 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				924A8A962CDCB3E000096976 /* PBXTargetDependency */,
+			);
+			name = KMPReactNativeTests;
+			productName = KMPReactNativeTests;
+			productReference = 924A8A942CDCB3E000096976 /* KMPReactNativeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		924A8A9D2CDCB3E000096976 /* KMPReactNativeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 924A8AAE2CDCB3E000096976 /* Build configuration list for PBXNativeTarget "KMPReactNativeUITests" */;
+			buildPhases = (
+				924A8A9A2CDCB3E000096976 /* Sources */,
+				924A8A9B2CDCB3E000096976 /* Frameworks */,
+				924A8A9C2CDCB3E000096976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				924A8AA02CDCB3E000096976 /* PBXTargetDependency */,
+			);
+			name = KMPReactNativeUITests;
+			productName = KMPReactNativeUITests;
+			productReference = 924A8A9E2CDCB3E000096976 /* KMPReactNativeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		924A8A7B2CDCB3DF00096976 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					924A8A822CDCB3DF00096976 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					924A8A932CDCB3E000096976 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 924A8A822CDCB3DF00096976;
+					};
+					924A8A9D2CDCB3E000096976 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 924A8A822CDCB3DF00096976;
+					};
+				};
+			};
+			buildConfigurationList = 924A8A7E2CDCB3DF00096976 /* Build configuration list for PBXProject "KMPReactNative" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 924A8A7A2CDCB3DF00096976;
+			productRefGroup = 924A8A842CDCB3DF00096976 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				924A8A822CDCB3DF00096976 /* KMPReactNative */,
+				924A8A932CDCB3E000096976 /* KMPReactNativeTests */,
+				924A8A9D2CDCB3E000096976 /* KMPReactNativeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		924A8A812CDCB3DF00096976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924A8AEF2CDCB49300096976 /* Preview Assets.xcassets in Resources */,
+				924A8AF02CDCB49300096976 /* Assets.xcassets in Resources */,
+				C24438563370F8A8CA6DA677 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924A8A922CDCB3E000096976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924A8A9C2CDCB3E000096976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		231DA6DEEC7CB3D19AB006F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMPReactNative-KMPReactNativeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41328C94F5D1488701D23718 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5908BB8002D7F352A449349C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E5375DB19C99223F06735C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EA712E420E596EDE616F09C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMPReactNative-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA4D08256FB48944C17BBE87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		924A8A7F2CDCB3DF00096976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924A8AED2CDCB49300096976 /* ContentView.swift in Sources */,
+				924A8AEE2CDCB49300096976 /* KMPReactNativeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924A8A902CDCB3E000096976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924A8AF32CDCB49300096976 /* KMPReactNativeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924A8A9A2CDCB3E000096976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				924A8AE42CDCB49200096976 /* KMPReactNativeUITests.swift in Sources */,
+				924A8AE52CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		924A8A962CDCB3E000096976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 924A8A822CDCB3DF00096976 /* KMPReactNative */;
+			targetProxy = 924A8A952CDCB3E000096976 /* PBXContainerItemProxy */;
+		};
+		924A8AA02CDCB3E000096976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 924A8A822CDCB3DF00096976 /* KMPReactNative */;
+			targetProxy = 924A8A9F2CDCB3E000096976 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		924A8AA62CDCB3E000096976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../node_modules/react-native";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HERMES = true;
+			};
+			name = Debug;
+		};
+		924A8AA72CDCB3E000096976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../node_modules/react-native";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				USE_HERMES = true;
+			};
+			name = Release;
+		};
+		924A8AA92CDCB3E000096976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EADBBBC6265274799FB84125 /* Pods-KMPReactNative.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KMPReactNative/KMPReactNative.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KMPReactNative/Preview Content\"";
+				DEVELOPMENT_TEAM = 4YSG3SYMLE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.github.henryquan.kmp.KMPReactNative;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		924A8AAA2CDCB3E000096976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB96C84B850A154BAE764EEF /* Pods-KMPReactNative.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KMPReactNative/KMPReactNative.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KMPReactNative/Preview Content\"";
+				DEVELOPMENT_TEAM = 4YSG3SYMLE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.github.henryquan.kmp.KMPReactNative;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		924A8AAC2CDCB3E000096976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E5539C9907D73805C52FBA6 /* Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4YSG3SYMLE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.github.henryquan.kmp.KMPReactNativeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMPReactNative.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KMPReactNative";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		924A8AAD2CDCB3E000096976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83758A0832B9FA8622B1FA5 /* Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4YSG3SYMLE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.github.henryquan.kmp.KMPReactNativeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMPReactNative.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KMPReactNative";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		924A8AAF2CDCB3E000096976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4YSG3SYMLE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.github.henryquan.kmp.KMPReactNativeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = KMPReactNative;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		924A8AB02CDCB3E000096976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4YSG3SYMLE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.github.henryquan.kmp.KMPReactNativeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = KMPReactNative;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		924A8A7E2CDCB3DF00096976 /* Build configuration list for PBXProject "KMPReactNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				924A8AA62CDCB3E000096976 /* Debug */,
+				924A8AA72CDCB3E000096976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		924A8AA82CDCB3E000096976 /* Build configuration list for PBXNativeTarget "KMPReactNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				924A8AA92CDCB3E000096976 /* Debug */,
+				924A8AAA2CDCB3E000096976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		924A8AAB2CDCB3E000096976 /* Build configuration list for PBXNativeTarget "KMPReactNativeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				924A8AAC2CDCB3E000096976 /* Debug */,
+				924A8AAD2CDCB3E000096976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		924A8AAE2CDCB3E000096976 /* Build configuration list for PBXNativeTarget "KMPReactNativeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				924A8AAF2CDCB3E000096976 /* Debug */,
+				924A8AB02CDCB3E000096976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 924A8A7B2CDCB3DF00096976 /* Project object */;
+}
