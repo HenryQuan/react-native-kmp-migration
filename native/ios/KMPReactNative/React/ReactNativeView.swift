@@ -14,13 +14,14 @@ class ReactNativeViewFactory {
     static var shared = ReactNativeViewFactory()
     private init() {}
     
+    /// With SwiftUI, the UIApplication delegate isn't the one we expect, have to pass it in manually
     private var viewFactory: RCTRootViewFactory?
     func provide(viewFactory: RCTRootViewFactory) {
         self.viewFactory = viewFactory
     }
     
     func produce(with moduleName: String) -> UIView? {
-        return viewFactory?.view(withModuleName: moduleName)
+        return viewFactory?.view(withModuleName: moduleName, initialProperties: [:])
     }
 }
 

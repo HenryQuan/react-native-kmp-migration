@@ -11,12 +11,15 @@ import React_RCTAppDelegate
 
 class AppDelegate: RCTAppDelegate {
     
+    override init() {
+        super.init()
+        UIApplication.shared.delegate = self
+    }
+    
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        rootViewFactory = RCTRootViewFactory(
-            configuration: .init(bundleURLBlock: {
-                self.bundleURL()
-            }, newArchEnabled: true, turboModuleEnabled: true, bridgelessEnabled: true)
-        )
+        self.automaticallyLoadReactNativeWindow = false
+        super.application(application, didFinishLaunchingWithOptions: launchOptions)
+        // MUST be called after calling SUPER
         ReactNativeViewFactory.shared.provide(viewFactory: rootViewFactory)
         return true
     }

@@ -20,13 +20,13 @@ end
 
 target "KMPReactNative" do
   config = use_native_modules!
-  # need to update the reactNativePath to the correct path
+  # need to update the reactNativePath to the existing node_modules path
   # config[:reactNativePath] = "../../existing/node_modules/react-native"
 
   use_react_native!(
     :path => config[:reactNativePath],
-    # An absolute path to your application root.
-    :app_path => "#{Pod::Config.instance.installation_root}/../../existing/",
+    # An absolute path to your application root, which is the current path
+    :app_path => "#{Pod::Config.instance.installation_root}",
   )
 
   target "KMPReactNativeTests" do
