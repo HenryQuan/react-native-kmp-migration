@@ -28,3 +28,6 @@ react-native-screens/android/build.gradle
 + File standardRnAndroidDirLocation = file("$rootDir/../../existing/node_modules/react-native/android")
 ```
 This will help to find the `react-native` folder.
+
+### iOS
+Clearly, the React Native module doesn't run on macOS, make sure to run on an iOS device instead to avoid weird issues. 
