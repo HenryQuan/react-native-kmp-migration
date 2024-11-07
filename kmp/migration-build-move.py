@@ -56,7 +56,7 @@ if __name__ == '__main__':
     # run gradlew :service:jsProductionRun and patch
     print('Running gradlew :migration:jsProductionRun')
 
-    gradlew = '.\gradlew.bat' if sys.platform == 'win32' else './gradlew'
+    gradlew = r'.\gradlew.bat' if sys.platform == 'win32' else r'./gradlew'
 
     yarn_update = subprocess.run([gradlew, 'kotlinUpgradeYarnLock'], capture_output=True)
     gradlew_task = subprocess.run([gradlew, ':migration:jsProductionRun'], capture_output=True)
