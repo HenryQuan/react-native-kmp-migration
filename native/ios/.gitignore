@@ -8,3 +8,6 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
+build/
+.xcode.env*
