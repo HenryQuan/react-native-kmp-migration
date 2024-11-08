@@ -1,6 +1,7 @@
 plugins {
     alias(kmp.plugins.kotlin.multiplatform)
     alias(kmp.plugins.kotlinx.serialization)
+    alias(kmp.plugins.kotlin.cocoapods)
 }
 
 kotlin {
@@ -21,9 +22,24 @@ kotlin {
             }
         }
     }
+
+    // Apple
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+    macosArm64()
+    macosX64()
+    watchosX64()
+    cocoapods {
+        version = "0.0.1"
+        summary = "KMP Migration"
+        homepage = "https://github.com/HenryQuan/react-native-kmp-migration"
+        name = "KmpMigration"
+        framework {
+            baseName = "KmpMigration" // the name of the framework
+            export(project(":migration"))
+        }
+    }
 
     sourceSets {
         commonMain.dependencies {
@@ -45,7 +61,7 @@ kotlin {
         jvmMain.dependencies {
             implementation(kmp.ktor.client.okhttp)
         }
-        iosMain.dependencies {
+        appleMain.dependencies {
             implementation(kmp.ktor.client.darwin)
         }
 
@@ -54,6 +70,13 @@ kotlin {
             languageSettings {
                 optIn("kotlin.js.ExperimentalJsExport")
             }
+        }
+    }
+
+    tasks {
+        // build the cocoapods framework for iOS & macOS
+        val buildCocoapods by creating {
+            dependsOn(":migration:cocoapodsInstall")
         }
     }
 }
