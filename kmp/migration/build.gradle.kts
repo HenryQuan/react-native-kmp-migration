@@ -24,20 +24,29 @@ kotlin {
     }
 
     // Apple
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
-    macosArm64()
-    macosX64()
-    watchosX64()
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64(),
+        macosArm64(),
+        macosX64(),
+        watchosX64(),
+    ).forEach {
+        it.binaries.framework {
+            baseName = "KmpMigration"
+        }
+    }
     cocoapods {
-        version = "0.0.1"
+        version = "0.0.2"
         summary = "KMP Migration"
         homepage = "https://github.com/HenryQuan/react-native-kmp-migration"
         name = "KmpMigration"
+        ios.deploymentTarget = "14.0"
         framework {
             baseName = "KmpMigration" // the name of the framework
-            export(project(":migration"))
+            isStatic = true // avoid dynamic framework
+            // DO NOT export this project, only export dependencies with API visibility
+//            export(project(":migration"))
         }
     }
 

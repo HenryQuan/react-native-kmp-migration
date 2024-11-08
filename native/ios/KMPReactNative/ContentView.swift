@@ -20,6 +20,11 @@ struct ContentView: View {
                 }, label: {
                     Text("Go to React Native")
                 })
+                NavigationLink(destination: {
+                    ShipAdditionalScreen()
+                }, label: {
+                    Text("Native Ship Additional")
+                })
             }
             .padding()
             .navigationTitle("SwiftUI Home")

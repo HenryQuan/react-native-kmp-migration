@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'KmpMigration'
-    spec.version                  = '0.0.1'
+    spec.version                  = '0.0.2'
     spec.homepage                 = 'https://github.com/HenryQuan/react-native-kmp-migration'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'KMP Migration'
     spec.vendored_frameworks      = 'build/cocoapods/framework/KmpMigration.framework'
     spec.libraries                = 'c++'
-                
+    spec.ios.deployment_target    = '14.0'
                 
                 
     if !Dir.exist?('build/cocoapods/framework/KmpMigration.framework') || Dir.empty?('build/cocoapods/framework/KmpMigration.framework')

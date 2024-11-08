@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		299997AD922F330CF093D1F2 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA22DF86FA25587BEEAA0DE2 /* libPods-KMPReactNative-KMPReactNativeTests.a */; };
-		2D932BD8A0B7641FA0517D8F /* libPods-KMPReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1C97D01EC010CEF18107E8 /* libPods-KMPReactNative.a */; };
+		8B3EFFC3895D6A31BBFE96D8 /* libPods-KMPReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84574F2EDC89559F6A758AA /* libPods-KMPReactNative.a */; };
+		8CBD68ABF3258E0CF8D93B19 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B15376788CFE75D285C7C5 /* libPods-KMPReactNative-KMPReactNativeTests.a */; };
 		924A8AE42CDCB49200096976 /* KMPReactNativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE12CDCB49200096976 /* KMPReactNativeUITests.swift */; };
 		924A8AE52CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE22CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift */; };
 		924A8AED2CDCB49300096976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE92CDCB49200096976 /* ContentView.swift */; };
@@ -18,6 +18,7 @@
 		924A8AF32CDCB49300096976 /* KMPReactNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AF12CDCB49300096976 /* KMPReactNativeTests.swift */; };
 		924A8AF52CDCB6BB00096976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AF42CDCB6BB00096976 /* AppDelegate.swift */; };
 		924A8AF92CDCB83A00096976 /* ReactNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AF82CDCB83A00096976 /* ReactNativeView.swift */; };
+		92B449ED2CDE2FEC00668656 /* ShipAdditionalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B449EC2CDE2FEC00668656 /* ShipAdditionalScreen.swift */; };
 		C24438563370F8A8CA6DA677 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -56,11 +57,12 @@
 		924A8AF82CDCB83A00096976 /* ReactNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeView.swift; sourceTree = "<group>"; };
 		924A8AFA2CDCBEBC00096976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		924A8AFB2CDCBECB00096976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		AB1C97D01EC010CEF18107E8 /* libPods-KMPReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMPReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B449EC2CDE2FEC00668656 /* ShipAdditionalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipAdditionalScreen.swift; sourceTree = "<group>"; };
+		B4B15376788CFE75D285C7C5 /* libPods-KMPReactNative-KMPReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMPReactNative-KMPReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83758A0832B9FA8622B1FA5 /* Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
-		EA22DF86FA25587BEEAA0DE2 /* libPods-KMPReactNative-KMPReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMPReactNative-KMPReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EADBBBC6265274799FB84125 /* Pods-KMPReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative.debug.xcconfig"; path = "Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		EB96C84B850A154BAE764EEF /* Pods-KMPReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative.release.xcconfig"; path = "Target Support Files/Pods-KMPReactNative/Pods-KMPReactNative.release.xcconfig"; sourceTree = "<group>"; };
+		F84574F2EDC89559F6A758AA /* libPods-KMPReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMPReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D932BD8A0B7641FA0517D8F /* libPods-KMPReactNative.a in Frameworks */,
+				8B3EFFC3895D6A31BBFE96D8 /* libPods-KMPReactNative.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299997AD922F330CF093D1F2 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */,
+				8CBD68ABF3258E0CF8D93B19 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +95,8 @@
 		59AB644FA6FCE8D4B1A3153B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB1C97D01EC010CEF18107E8 /* libPods-KMPReactNative.a */,
-				EA22DF86FA25587BEEAA0DE2 /* libPods-KMPReactNative-KMPReactNativeTests.a */,
+				F84574F2EDC89559F6A758AA /* libPods-KMPReactNative.a */,
+				B4B15376788CFE75D285C7C5 /* libPods-KMPReactNative-KMPReactNativeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 				924A8AF62CDCB79F00096976 /* React */,
 				924A8AF72CDCB7AC00096976 /* Support */,
 				924A8AE92CDCB49200096976 /* ContentView.swift */,
+				92B449EC2CDE2FEC00668656 /* ShipAdditionalScreen.swift */,
 				924A8AEB2CDCB49200096976 /* KMPReactNativeApp.swift */,
 				924A8AF42CDCB6BB00096976 /* AppDelegate.swift */,
 			);
@@ -446,6 +449,7 @@
 				924A8AF92CDCB83A00096976 /* ReactNativeView.swift in Sources */,
 				924A8AED2CDCB49300096976 /* ContentView.swift in Sources */,
 				924A8AEE2CDCB49300096976 /* KMPReactNativeApp.swift in Sources */,
+				92B449ED2CDE2FEC00668656 /* ShipAdditionalScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,14 +538,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../node_modules/react-native";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -595,13 +607,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../node_modules/react-native";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				USE_HERMES = true;

@@ -29,6 +29,10 @@ target "KMPReactNative" do
     :app_path => "#{Pod::Config.instance.installation_root}",
   )
 
+  # use the KMP podspec
+  # use_frameworks! cannot be used with React Native, so make it a static library
+  pod "KmpMigration", :path => "../../kmp/migration/KmpMigration.podspec"
+
   target "KMPReactNativeTests" do
     inherit! :complete
     # Pods for testing
