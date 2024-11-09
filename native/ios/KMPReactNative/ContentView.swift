@@ -25,6 +25,11 @@ struct ContentView: View {
                 }, label: {
                     Text("Native Ship Additional")
                 })
+                NavigationLink(destination: {
+                    ComposeHomeScreenView()
+                }, label: {
+                    Text("Compose View")
+                })
             }
             .padding()
             .navigationTitle("SwiftUI Home")

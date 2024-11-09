@@ -18,6 +18,7 @@
 		924A8AF32CDCB49300096976 /* KMPReactNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AF12CDCB49300096976 /* KMPReactNativeTests.swift */; };
 		924A8AF52CDCB6BB00096976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AF42CDCB6BB00096976 /* AppDelegate.swift */; };
 		924A8AF92CDCB83A00096976 /* ReactNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AF82CDCB83A00096976 /* ReactNativeView.swift */; };
+		928E09D72CDF2396005DAB06 /* ComposeHomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E09D62CDF2396005DAB06 /* ComposeHomeScreenView.swift */; };
 		92B449ED2CDE2FEC00668656 /* ShipAdditionalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B449EC2CDE2FEC00668656 /* ShipAdditionalScreen.swift */; };
 		C24438563370F8A8CA6DA677 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		924A8AF82CDCB83A00096976 /* ReactNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeView.swift; sourceTree = "<group>"; };
 		924A8AFA2CDCBEBC00096976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		924A8AFB2CDCBECB00096976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		928E09D62CDF2396005DAB06 /* ComposeHomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeHomeScreenView.swift; sourceTree = "<group>"; };
 		92B449EC2CDE2FEC00668656 /* ShipAdditionalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipAdditionalScreen.swift; sourceTree = "<group>"; };
 		B4B15376788CFE75D285C7C5 /* libPods-KMPReactNative-KMPReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KMPReactNative-KMPReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83758A0832B9FA8622B1FA5 /* Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				924A8AFB2CDCBECB00096976 /* Info.plist */,
 				924A8AE72CDCB49200096976 /* Preview Content */,
 				924A8AF62CDCB79F00096976 /* React */,
+				928E09D32CDF2381005DAB06 /* Compose */,
 				924A8AF72CDCB7AC00096976 /* Support */,
 				924A8AE92CDCB49200096976 /* ContentView.swift */,
 				92B449EC2CDE2FEC00668656 /* ShipAdditionalScreen.swift */,
@@ -191,6 +194,14 @@
 				206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		928E09D32CDF2381005DAB06 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				928E09D62CDF2396005DAB06 /* ComposeHomeScreenView.swift */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +459,7 @@
 				924A8AF52CDCB6BB00096976 /* AppDelegate.swift in Sources */,
 				924A8AF92CDCB83A00096976 /* ReactNativeView.swift in Sources */,
 				924A8AED2CDCB49300096976 /* ContentView.swift in Sources */,
+				928E09D72CDF2396005DAB06 /* ComposeHomeScreenView.swift in Sources */,
 				924A8AEE2CDCB49300096976 /* KMPReactNativeApp.swift in Sources */,
 				92B449ED2CDE2FEC00668656 /* ShipAdditionalScreen.swift in Sources */,
 			);
