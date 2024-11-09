@@ -70,7 +70,7 @@ kotlin {
             // compose namespace should be included in the plugin probably, we don't have to control the version manually anymore
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material)
+            implementation(compose.material3) // 3 or just material, up to the design
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)

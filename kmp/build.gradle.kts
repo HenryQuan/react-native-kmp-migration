@@ -10,9 +10,10 @@ plugins {
 
 // NOTE: use allprojects instead of subprojects here to avoid
 // Cannot resolve external because no repositories are defined.
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+// NOTE: moved to settings.gradle.kts
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
