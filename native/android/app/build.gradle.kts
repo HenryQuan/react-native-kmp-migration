@@ -20,6 +20,11 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        // Filter for architectures supported by Flutter
+        ndk {
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64"))
+        }
     }
 
     buildTypes {
@@ -32,8 +37,9 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        // Flutter requires Java 11 minimum
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = "17"
@@ -52,6 +58,7 @@ android {
 }
 
 dependencies {
+    // kmp, must match the name exactly
     implementation(project(":migration"))
 
     implementation(libs.androidx.core.ktx)
@@ -73,6 +80,9 @@ dependencies {
     // react native
     implementation(libs.react.android)
     implementation(libs.hermes.android)
+
+    // flutter, follow the name in include(":whatever"), must match
+    implementation(project(":flutter_module"))
 }
 
 react {

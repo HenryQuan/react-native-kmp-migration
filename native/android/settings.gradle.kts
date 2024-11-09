@@ -54,3 +54,10 @@ extensions.configure<com.facebook.react.ReactSettingsExtension> {
 }
 
 includeBuild("../../existing/node_modules/@react-native/gradle-plugin")
+
+// setup flutter module
+include(":flutter_module")
+project(":flutter_module").projectDir = file("../../flutter_module/.android")
+// This doesn't seem to work following the official guide, am I missing something?
+//val flutterPath = "../../flutter_module/.android/include_flutter.groovy"
+//apply(from = File(flutterPath))
