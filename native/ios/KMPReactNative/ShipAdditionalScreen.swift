@@ -91,9 +91,7 @@ struct ShipAdditionalScreen: View {
                 } else {
                     ShipAdditionalListView(shipAdditional: viewModel.shipAdditional)
                 }
-            }.onAppear {
-                viewModel.fetchData()
-            }
+            }.onAppear(perform: viewModel.fetchData)
         }
     }
 }

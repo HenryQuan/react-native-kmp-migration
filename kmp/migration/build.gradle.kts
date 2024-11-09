@@ -1,7 +1,12 @@
 plugins {
     alias(kmp.plugins.kotlin.multiplatform)
     alias(kmp.plugins.kotlinx.serialization)
+    // Apple, iOS, macOS, watchOS
     alias(kmp.plugins.kotlin.cocoapods)
+
+    // compose
+    alias(kmp.plugins.compose.multiplatform)
+    alias(kmp.plugins.compose.compiler)
 }
 
 kotlin {
@@ -30,7 +35,8 @@ kotlin {
         iosSimulatorArm64(),
         macosArm64(),
         macosX64(),
-        watchosX64(),
+        // NOTE: can still be included if we move compose dependencies to individual targets instead of commonMain
+        // watchosX64(), cannot be enabled due to the compose multiplatform
     ).forEach {
         it.binaries.framework {
             baseName = "KmpMigration"
@@ -59,6 +65,17 @@ kotlin {
 
             implementation(kmp.kotlinx.serialization.json)
             implementation(kmp.kotlinx.coroutines.core)
+
+            // compose related
+            // compose namespace should be included in the plugin probably, we don't have to control the version manually anymore
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
+            implementation(kmp.androidx.lifecycle.viewmodel)
+            implementation(kmp.androidx.lifecycle.runtime.compose)
         }
         commonTest.dependencies {
             implementation(kmp.kotlin.test)
