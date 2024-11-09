@@ -12,9 +12,16 @@ typealias ShipAdditionalMap = [String: ShipAdditional]
 
 class ShipAdditionalViewModel: ObservableObject {
     @Published var shipAdditional: ShipAdditionalMap? = nil
-    @Published var filterUseCase: FilterUseCase? = nil
+    private var filterUseCase: FilterUseCase? = nil
+    
+    @Published var filterText: String = ""
+    @Published var filteredList: [UniqueString] = []
     
     private let service = ShipAdditionalService()
+    
+    var filteredString: String {
+        filteredList.isEmpty ? "No filter result, showing all ships" : "Filtered result: \(filteredList.count)"
+    }
 
     func fetchData() {
         guard shipAdditional == nil else { return }
@@ -31,18 +38,30 @@ class ShipAdditionalViewModel: ObservableObject {
             }
         }
     }
+    
+    func onFilterTextChange() {
+        if !filterText.isEmpty {
+            if let penInput = Int32(filterText) {
+                // NOTE: the order seems to be random here, emm maybe a sorting is needed from the kotlin side
+                // REACT Native side is quite stable, could be due to the UniqueString or whatever reason
+                filteredList = filterUseCase?.filterHEPen(pen: penInput)
+                    .enumerated()
+                    .map { index, value in UniqueString(id: index, value: value) } ?? []
+                return
+            }
+        }
+        filteredList = []
+    }
 }
 
 struct UniqueString: Identifiable {
-    let id = UUID()
+    let id: Int
     let value: String
 }
 
 
 struct ShipAdditionalScreen: View {
-    @State private var filterText = ""
-    @State private var filteredList: [UniqueString] = []
-    @ObservedObject var viewModel = ShipAdditionalViewModel()
+    @StateObject var viewModel = ShipAdditionalViewModel()
 
     var body: some View {
         NavigationView {
@@ -53,26 +72,17 @@ struct ShipAdditionalScreen: View {
                     .padding()
 
                 // Text field for filtering
-                TextField("Filter by alphaPiercingHE", text: $filterText)
+                TextField("Filter by alphaPiercingHE", text: $viewModel.filterText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .onSubmit {
-                        if !filterText.isEmpty {
-                            if let penInput = Int32(filterText) {
-                                filteredList = viewModel.filterUseCase?.filterHEPen(pen: penInput)
-                                    .map({UniqueString(value: $0)}) ?? []
-                                return
-                            }
-                        }
-                        filteredList = []
-                    }
+                    .onSubmit(viewModel.onFilterTextChange)
                 
                 // Filter result message
-                Text(filteredList.isEmpty ? "No filter result, showing all ships" : "Filtered result: \(filteredList.count)")
+                Text(viewModel.filteredString)
                     .padding()
                 
                 // Display the list in a scrollable column
-                if !filteredList.isEmpty {
-                    List(filteredList) { item in
+                if !viewModel.filteredList.isEmpty {
+                    List(viewModel.filteredList) { item in
                         VStack(alignment: .leading) {
                             Text(item.value)
                                 .font(.headline)
@@ -107,9 +117,7 @@ struct ShipAdditionalListView: View {
                     }
                 }
             } else {
-                Text("Loading...")
-                    .font(.subheadline)
-                    .padding()
+                ProgressView()
             }
         }
     }

@@ -55,7 +55,7 @@ function HomeScreen(): React.JSX.Element {
       />
       <Text>
         {hasFilterResult()
-          ? 'Filtered result:'
+          ? `Filtered result: ${filteredList.length}`
           : 'No filter result, showing all ships'}
       </Text>
       <ScrollView style={{height: '100%'}}>
