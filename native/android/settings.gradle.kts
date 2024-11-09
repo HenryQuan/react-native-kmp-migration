@@ -17,7 +17,10 @@ pluginManagement {
     includeBuild("../../existing/node_modules/@react-native/gradle-plugin")
 }
 
-rootProject.name = "Android+KMP"
+// The + shouldn't be used here, it will cause this error while building the project:
+// ERROR: migration-jvm.jar: D8: Class descriptor 'Landroid+kmp/migration/generated/resources/ActualResourceCollectorsKt;'
+// cannot be represented in dex format, the issue is with android+kmp, update the name to remove the + sign
+rootProject.name = "AndroidKMP"
 include(":app")
 
 // use the kmp module, require some setup here

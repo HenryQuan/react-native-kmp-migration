@@ -1,5 +1,6 @@
 package org.github.henryquan.nativeandroidkmp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -14,6 +15,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import io.github.henryquan.ui.CommonHomeScreen
+import org.github.henryquan.nativeandroidkmp.react.ExistingReactActivity
 import org.github.henryquan.nativeandroidkmp.ui.theme.AndroidKMPTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,9 +26,18 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AndroidKMPTheme {
-                HomeScreen()
+//                HomeScreen()
+                // the shared screen from the multiplatform module
+                CommonHomeScreen {
+                    useLaunchReactNative()
+                }
             }
         }
+    }
+
+    private fun useLaunchReactNative() {
+        val intent = Intent(this, ExistingReactActivity::class.java)
+        startActivity(intent)
     }
 }
 
