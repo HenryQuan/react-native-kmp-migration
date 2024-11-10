@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
+@pragma('vm:entry-point')
+void flutterView() => runApp(
+      const MaterialApp(
+        home: Center(
+          child: Text('Hello from Flutter!'),
+        ),
+      ),
+    );
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

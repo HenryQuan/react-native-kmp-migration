@@ -42,6 +42,7 @@ dependencyResolutionManagement {
 }
 
 // use the existing react native module
+// run `python patch-node-modules.py` to fix react native related issues
 plugins { id("com.facebook.react.settings") }
 // If using .gradle.kts files:
 extensions.configure<com.facebook.react.ReactSettingsExtension> {
@@ -56,8 +57,7 @@ extensions.configure<com.facebook.react.ReactSettingsExtension> {
 includeBuild("../../existing/node_modules/@react-native/gradle-plugin")
 
 // setup flutter module
-include(":flutter_module")
-project(":flutter_module").projectDir = file("../../flutter_module/.android")
-// This doesn't seem to work following the official guide, am I missing something?
-//val flutterPath = "../../flutter_module/.android/include_flutter.groovy"
-//apply(from = File(flutterPath))
+// only works with Flutter 3.27 default groovy, a patch is needed to work with lower versions
+// use `python patch-flutter-groovy.py`
+val flutterPath = "../../flutter_module/.android/include_flutter.groovy"
+apply(from = File(flutterPath))

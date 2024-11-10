@@ -23,6 +23,7 @@ android {
 
         // Filter for architectures supported by Flutter
         ndk {
+            abiFilters.clear()
             abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64"))
         }
     }
@@ -81,8 +82,8 @@ dependencies {
     implementation(libs.react.android)
     implementation(libs.hermes.android)
 
-    // flutter, follow the name in include(":whatever"), must match
-    implementation(project(":flutter_module"))
+    // flutter, must be flutter if applying from groovy
+    implementation(project(":flutter"))
 }
 
 react {
