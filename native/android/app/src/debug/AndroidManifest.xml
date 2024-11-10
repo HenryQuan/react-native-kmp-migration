@@ -32,6 +32,10 @@
             android:name=".react.ExistingReactActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".flutter.DefaultFlutterFragmentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>

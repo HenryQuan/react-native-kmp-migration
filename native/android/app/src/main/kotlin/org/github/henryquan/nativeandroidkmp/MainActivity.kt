@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.henryquan.ui.CommonHomeScreen
+import org.github.henryquan.nativeandroidkmp.flutter.DefaultFlutterFragmentActivity
+import org.github.henryquan.nativeandroidkmp.flutter.FlutterComposeView
 import org.github.henryquan.nativeandroidkmp.react.ExistingReactActivity
 import org.github.henryquan.nativeandroidkmp.ui.theme.AndroidKMPTheme
 
@@ -28,15 +30,25 @@ class MainActivity : ComponentActivity() {
             AndroidKMPTheme {
 //                HomeScreen()
                 // the shared screen from the multiplatform module
-                CommonHomeScreen {
-                    useLaunchReactNative()
-                }
+                CommonHomeScreen(
+                    launchReactNative = {
+                        useLaunchReactNative()
+                    },
+                    launchFlutter = {
+                        useLaunchFlutter()
+                    }
+                )
             }
         }
     }
 
     private fun useLaunchReactNative() {
         val intent = Intent(this, ExistingReactActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun useLaunchFlutter() {
+        val intent = Intent(this, DefaultFlutterFragmentActivity::class.java)
         startActivity(intent)
     }
 }

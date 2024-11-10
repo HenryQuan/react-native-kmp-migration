@@ -80,7 +80,8 @@ fun useCommonShipAdditional(): Pair<ShipAdditionalMap?, FilterUseCase?> {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CommonHomeScreen(
-    launchReactNative: (() -> Unit)? = null
+    launchReactNative: (() -> Unit)? = null,
+    launchFlutter: (() -> Unit)? = null,
 ) {
     val (shipAdditional, filterUseCase) = useCommonShipAdditional()
     var filterText by remember { mutableStateOf(TextFieldValue("")) }
@@ -108,6 +109,15 @@ fun CommonHomeScreen(
                     modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
                 ) {
                     Text("Go to React Native")
+                }
+            }
+
+            launchFlutter?.let {
+                Button(
+                    onClick = { launchFlutter() },
+                    modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
+                ) {
+                    Text("Go to Flutter")
                 }
             }
 

@@ -11,6 +11,11 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+import io.flutter.FlutterInjector
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.FlutterEngineCache
+import io.flutter.embedding.engine.FlutterEngineGroup
+import io.flutter.embedding.engine.dart.DartExecutor
 
 internal class MainApplication : Application(), ReactApplication {
     override val reactNativeHost: ReactNativeHost
@@ -44,5 +49,40 @@ internal class MainApplication : Application(), ReactApplication {
         if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
             load()
         }
+
+        setupFlutterEngineGroup()
+    }
+
+    private lateinit var engineGroup: FlutterEngineGroup
+    companion object {
+        val flutterEngineCacheId = "kmp_rn_flutter_engine_default"
+        val standadloneViewEngineCacheId = "kmp_rn_flutter_engine_standalone_view"
+    }
+
+    private fun setupFlutterEngineGroup() {
+        engineGroup = FlutterEngineGroup(this)
+        val defaultEngine = engineGroup.createAndRunDefaultEngine(this)
+        val viewEngine = engineGroup.createAndRunEngine(
+            this,
+            DartExecutor.DartEntrypoint(
+                getFlutterBundlePath(),
+                "main"
+            )
+        )
+
+        FlutterEngineCache.getInstance().apply {
+            put(flutterEngineCacheId, defaultEngine)
+            put(standadloneViewEngineCacheId, viewEngine)
+        }
+    }
+
+    private fun getFlutterBundlePath(): String {
+        val flutterLoader = FlutterInjector.instance().flutterLoader()
+        if (!flutterLoader.initialized()) {
+            throw AssertionError(
+                "DartEntrypoints can only be created once a FlutterEngine is created."
+            )
+        }
+        return flutterLoader.findAppBundlePath()
     }
 }
