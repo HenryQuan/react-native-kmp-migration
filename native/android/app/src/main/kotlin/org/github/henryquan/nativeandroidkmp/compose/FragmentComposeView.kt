@@ -13,19 +13,18 @@ import io.flutter.embedding.android.FlutterFragment
 
 @Composable
 fun ReactNativeComposeView(componentName: String) {
-    val reactNativeFragment = ReactFragment.Builder()
-                   .setComponentName(componentName)
-                   // pass props to React Native if needed
-//                   .setLaunchOptions(Bundle().apply { putString("message", "my value") })
-                   .build()
-
-    FragmentBridgeView(reactNativeFragment)
+    FragmentBridgeView({
+        ReactFragment.Builder()
+            .setComponentName(componentName)
+            .build()
+    })
 }
 
 @Composable
 fun FlutterComposeView(cachedEngineId: String) {
-    val flutterFragment: FlutterFragment = FlutterFragment.withCachedEngine(cachedEngineId).build()
-    FragmentBridgeView(flutterFragment)
+    FragmentBridgeView({
+        FlutterFragment.withCachedEngine(cachedEngineId).build()
+    })
 }
 
 /**
@@ -35,13 +34,14 @@ fun FlutterComposeView(cachedEngineId: String) {
  */
 @Composable
 fun FragmentBridgeView(
-    fragment: Fragment, modifier: Modifier = Modifier
+    fragmentBuilder: () -> Fragment, modifier: Modifier = Modifier
 ) {
     AndroidView(modifier = modifier.fillMaxSize(), factory = { context ->
         FragmentContainerView(context).apply {
             id = View.generateViewId()
             if (context is FragmentActivity) {
                 val fragmentManager = context.supportFragmentManager
+                val fragment = fragmentBuilder()
                 // allow state loss is requited for this to work because it ignores state loss, more async
                 fragmentManager.beginTransaction().replace(id, fragment).commitAllowingStateLoss()
                 return@apply
