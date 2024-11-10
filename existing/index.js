@@ -42,3 +42,7 @@ function Main() {
 }
 
 AppRegistry.registerComponent(appName, () => Main);
+
+AppRegistry.registerComponent("reactNativeView", () => <View>
+  <Text>React Native View</Text>
+</View>);

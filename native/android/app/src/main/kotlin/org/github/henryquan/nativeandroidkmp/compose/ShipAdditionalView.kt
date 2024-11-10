@@ -1,4 +1,4 @@
-package org.github.henryquan.nativeandroidkmp
+package org.github.henryquan.nativeandroidkmp.compose
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding

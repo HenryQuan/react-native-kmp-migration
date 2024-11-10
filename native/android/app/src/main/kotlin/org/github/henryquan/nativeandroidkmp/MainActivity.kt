@@ -17,7 +17,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.henryquan.ui.CommonHomeScreen
 import org.github.henryquan.nativeandroidkmp.flutter.DefaultFlutterFragmentActivity
-import org.github.henryquan.nativeandroidkmp.flutter.FlutterComposeView
 import org.github.henryquan.nativeandroidkmp.react.ExistingReactActivity
 import org.github.henryquan.nativeandroidkmp.ui.theme.AndroidKMPTheme
 

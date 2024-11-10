@@ -10,15 +10,61 @@ import org.github.henryquan.nativeandroidkmp.R
 class DefaultFlutterFragmentActivity : CustomFlutterFragmentActivity(MainApplication.flutterEngineCacheId)
 
 // copied from https://docs.flutter.dev/add-to-app/android/add-flutter-fragment#add-a-flutterfragment-to-an-activity-with-a-new-flutterengine
+abstract class FlutterFragmentContainerActivity : FragmentActivity() {
+    var flutterFragment: FlutterFragment? = null
+
+    override fun onPostResume() {
+        super.onPostResume()
+        flutterFragment?.onPostResume()
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        flutterFragment?.onNewIntent(intent)
+        super.onNewIntent(intent)
+    }
+
+    override fun onBackPressed() {
+        flutterFragment?.onBackPressed()
+        super.onBackPressed()
+    }
+
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int, permissions: Array<String?>, grantResults: IntArray
+//    ) {
+//        flutterFragment?.onRequestPermissionsResult(
+//            requestCode, permissions, grantResults
+//        )
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//    }
+
+
+    override fun onActivityResult(
+        requestCode: Int, resultCode: Int, data: Intent?
+    ) {
+        super.onActivityResult(requestCode, resultCode, data)
+        flutterFragment?.onActivityResult(
+            requestCode, resultCode, data
+        )
+    }
+
+    override fun onUserLeaveHint() {
+        flutterFragment?.onUserLeaveHint()
+        super.onUserLeaveHint()
+    }
+
+    override fun onTrimMemory(level: Int) {
+        super.onTrimMemory(level)
+        flutterFragment?.onTrimMemory(level)
+    }
+}
+
 abstract class CustomFlutterFragmentActivity(private val cachedEngineId: String) :
-    FragmentActivity() {
+    FlutterFragmentContainerActivity() {
     companion object {
         // Define a tag String to represent the FlutterFragment within this
         // Activity's FragmentManager. This value can be whatever you'd like.
         private const val TAG_FLUTTER_FRAGMENT = "flutter_fragment_placeholder"
     }
-
-    var flutterFragment: FlutterFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,49 +92,5 @@ abstract class CustomFlutterFragmentActivity(private val cachedEngineId: String)
                 R.id.flutter_fragment_container, newFlutterFragment, TAG_FLUTTER_FRAGMENT
             ).commit()
         }
-    }
-
-    override fun onPostResume() {
-        super.onPostResume()
-        flutterFragment!!.onPostResume()
-    }
-
-    override fun onNewIntent(intent: Intent) {
-        flutterFragment!!.onNewIntent(intent)
-        super.onNewIntent(intent)
-    }
-
-    override fun onBackPressed() {
-        flutterFragment!!.onBackPressed()
-        super.onBackPressed()
-    }
-
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int, permissions: Array<String?>, grantResults: IntArray
-//    ) {
-//        flutterFragment!!.onRequestPermissionsResult(
-//            requestCode, permissions, grantResults
-//        )
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//    }
-
-
-    override fun onActivityResult(
-        requestCode: Int, resultCode: Int, data: Intent?
-    ) {
-        super.onActivityResult(requestCode, resultCode, data)
-        flutterFragment!!.onActivityResult(
-            requestCode, resultCode, data
-        )
-    }
-
-    override fun onUserLeaveHint() {
-        flutterFragment!!.onUserLeaveHint()
-        super.onUserLeaveHint()
-    }
-
-    override fun onTrimMemory(level: Int) {
-        super.onTrimMemory(level)
-        flutterFragment!!.onTrimMemory(level)
     }
 }
