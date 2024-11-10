@@ -22,9 +22,18 @@ android {
         }
 
         // Filter for architectures supported by Flutter
-        ndk {
-            abiFilters.clear()
-            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64"))
+//        ndk {
+//            abiFilters.clear()
+//            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64"))
+//        }
+    }
+
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("armeabi-v7a", "arm64-v8a", "x86_64")
+            isUniversalApk = false // Don't build a universal APK
         }
     }
 
