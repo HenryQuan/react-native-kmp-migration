@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 void main() => runApp(const MyApp());
 
 @pragma('vm:entry-point')
-void flutterView() => runApp(
+void flutterhello() => runApp(
       const MaterialApp(
-        home: Center(
-          child: Text('Hello from Flutter!'),
+        home: Column(
+          children: [
+            Text('Hello from Flutter!'),
+            Banner(message: "Flutter!", location: BannerLocation.bottomEnd)
+          ],
         ),
       ),
     );

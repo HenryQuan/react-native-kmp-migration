@@ -2,14 +2,19 @@ package org.github.henryquan.nativeandroidkmp.compose
 
 import android.content.Intent
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -116,4 +121,21 @@ fun HomeScreen() {
             }
         }
     })
+}
+
+@Composable
+fun HelloComposeView() {
+    Column {
+        Text("Hello, Compose!")
+        Row {
+            repeat(6) {
+                FloatingActionButton({}) {
+                    Icon(
+                        imageVector = Icons.Default.Favorite,
+                        contentDescription = null
+                    )
+                }
+            }
+        }
+    }
 }

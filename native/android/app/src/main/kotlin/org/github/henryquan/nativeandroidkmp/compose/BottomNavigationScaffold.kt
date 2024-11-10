@@ -2,6 +2,7 @@ package org.github.henryquan.nativeandroidkmp.compose
 
 import android.app.Activity
 import android.content.Intent
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -124,7 +125,7 @@ fun NavHostView(
         }
         // React Native screen
         composable(BottomNavigationRoutes.ReactNative.name) {
-            ReactNativeComposeView("existing")
+            ReactNativeComposeView("existing", Modifier.fillMaxSize())
         }
         // Flutter screen
         composable(BottomNavigationRoutes.Flutter.name) {
@@ -132,7 +133,7 @@ fun NavHostView(
         }
         // All screens in one
         composable(BottomNavigationRoutes.All.name) {
-
+            TrinityView()
         }
     }
 }

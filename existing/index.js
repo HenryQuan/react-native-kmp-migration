@@ -10,6 +10,7 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './src/Home';
+import HelloReactNative from './src/Hello';
 
 // Polyfill for ReadableStream and TextDecoder
 // This will make ktor run on React Native projects
@@ -42,7 +43,4 @@ function Main() {
 }
 
 AppRegistry.registerComponent(appName, () => Main);
-
-AppRegistry.registerComponent("reactNativeView", () => <View>
-  <Text>React Native View</Text>
-</View>);
+AppRegistry.registerComponent("reactNativeView", () => HelloReactNative);

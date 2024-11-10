@@ -66,7 +66,7 @@ internal class MainApplication : Application(), ReactApplication {
             this,
             DartExecutor.DartEntrypoint(
                 getFlutterBundlePath(),
-                "main"
+                "flutterhello"
             )
         )
 

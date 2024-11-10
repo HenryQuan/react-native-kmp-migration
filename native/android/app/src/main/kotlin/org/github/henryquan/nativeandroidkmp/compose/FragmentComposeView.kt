@@ -12,19 +12,19 @@ import com.facebook.react.ReactFragment
 import io.flutter.embedding.android.FlutterFragment
 
 @Composable
-fun ReactNativeComposeView(componentName: String) {
+fun ReactNativeComposeView(componentName: String, modifier: Modifier = Modifier) {
     FragmentBridgeView({
         ReactFragment.Builder()
             .setComponentName(componentName)
             .build()
-    })
+    }, modifier)
 }
 
 @Composable
-fun FlutterComposeView(cachedEngineId: String) {
+fun FlutterComposeView(cachedEngineId: String, modifier: Modifier = Modifier) {
     FragmentBridgeView({
         FlutterFragment.withCachedEngine(cachedEngineId).build()
-    })
+    }, modifier)
 }
 
 /**
@@ -36,7 +36,7 @@ fun FlutterComposeView(cachedEngineId: String) {
 fun FragmentBridgeView(
     fragmentBuilder: () -> Fragment, modifier: Modifier = Modifier
 ) {
-    AndroidView(modifier = modifier.fillMaxSize(), factory = { context ->
+    AndroidView(modifier = modifier, factory = { context ->
         FragmentContainerView(context).apply {
             id = View.generateViewId()
             if (context is FragmentActivity) {
