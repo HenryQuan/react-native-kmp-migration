@@ -30,7 +30,6 @@ import org.github.henryquan.nativeandroidkmp.MainActivity
 import org.github.henryquan.nativeandroidkmp.react.ExistingReactActivity
 
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen() {
@@ -72,7 +71,8 @@ fun HomeScreen() {
             }
 
             // Text field for filtering
-            TextField(value = filterText,
+            TextField(
+                value = filterText,
                 onValueChange = { newValue ->
                     if (newValue.text.isEmpty()) {
                         filterText = newValue

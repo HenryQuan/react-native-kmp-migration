@@ -37,10 +37,11 @@
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
+        <!-- The theme must be Theme.AppCompat or descendant, required by React Native -->
         <activity
             android:name=".TrinityActivity"
             android:exported="true"
-            android:theme="@style/Theme.AndroidKMP">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

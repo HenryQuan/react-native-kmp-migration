@@ -1,5 +1,7 @@
 package org.github.henryquan.nativeandroidkmp.compose
 
+import android.app.Activity
+import android.content.Intent
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -9,15 +11,21 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import io.github.henryquan.ui.CommonHomeScreen
+import org.github.henryquan.nativeandroidkmp.MainApplication
+import org.github.henryquan.nativeandroidkmp.flutter.DefaultFlutterFragmentActivity
+import org.github.henryquan.nativeandroidkmp.react.ExistingReactActivity
 
 data class BottomNavigationItem(
     val route: BottomNavigationRoutes,
@@ -90,20 +98,37 @@ fun NavHostView(
     startDestination: String,
     modifier: Modifier = Modifier,
 ) {
+    val activity = LocalContext.current as Activity
+    fun useLaunchReactNative() {
+        val intent = Intent(activity, ExistingReactActivity::class.java)
+        activity.startActivity(intent)
+    }
+    fun useLaunchFlutter() {
+        val intent = Intent(activity, DefaultFlutterFragmentActivity::class.java)
+        activity.startActivity(intent)
+    }
+
     NavHost(
         navController = navController, startDestination = startDestination, modifier = modifier
     ) {
         // Compose screen
         composable(BottomNavigationRoutes.Compose.name) {
-
+            CommonHomeScreen(
+                launchReactNative = {
+                    useLaunchReactNative()
+                },
+                launchFlutter = {
+                    useLaunchFlutter()
+                }
+            )
         }
         // React Native screen
         composable(BottomNavigationRoutes.ReactNative.name) {
-
+            ReactNativeComposeView("existing")
         }
         // Flutter screen
         composable(BottomNavigationRoutes.Flutter.name) {
-
+            FlutterComposeView(MainApplication.flutterEngineCacheId)
         }
         // All screens in one
         composable(BottomNavigationRoutes.All.name) {

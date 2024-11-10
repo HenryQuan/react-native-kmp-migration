@@ -2,6 +2,7 @@ package org.github.henryquan.nativeandroidkmp.flutter
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import io.flutter.embedding.android.FlutterFragment
 import org.github.henryquan.nativeandroidkmp.MainApplication
@@ -10,7 +11,8 @@ import org.github.henryquan.nativeandroidkmp.R
 class DefaultFlutterFragmentActivity : CustomFlutterFragmentActivity(MainApplication.flutterEngineCacheId)
 
 // copied from https://docs.flutter.dev/add-to-app/android/add-flutter-fragment#add-a-flutterfragment-to-an-activity-with-a-new-flutterengine
-abstract class FlutterFragmentContainerActivity : FragmentActivity() {
+// must be AppCompatActivity which is also a FragmentActivity, required by React Native
+abstract class FlutterFragmentContainerActivity : AppCompatActivity() {
     var flutterFragment: FlutterFragment? = null
 
     override fun onPostResume() {
