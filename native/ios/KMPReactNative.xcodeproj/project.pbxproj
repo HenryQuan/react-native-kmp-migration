@@ -10,6 +10,7 @@
 		8B3EFFC3895D6A31BBFE96D8 /* libPods-KMPReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84574F2EDC89559F6A758AA /* libPods-KMPReactNative.a */; };
 		8CBD68ABF3258E0CF8D93B19 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B15376788CFE75D285C7C5 /* libPods-KMPReactNative-KMPReactNativeTests.a */; };
 		92185BE62CE4C10900054600 /* FlutterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92185BE52CE4C10900054600 /* FlutterView.swift */; };
+		92185BE82CE4C37200054600 /* AllTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92185BE72CE4C37200054600 /* AllTabView.swift */; };
 		924A8AE42CDCB49200096976 /* KMPReactNativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE12CDCB49200096976 /* KMPReactNativeUITests.swift */; };
 		924A8AE52CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE22CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift */; };
 		924A8AED2CDCB49300096976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE92CDCB49200096976 /* ContentView.swift */; };
@@ -45,6 +46,7 @@
 		206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ../../PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6E5539C9907D73805C52FBA6 /* Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92185BE52CE4C10900054600 /* FlutterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterView.swift; sourceTree = "<group>"; };
+		92185BE72CE4C37200054600 /* AllTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTabView.swift; sourceTree = "<group>"; };
 		924A8A832CDCB3DF00096976 /* KMPReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMPReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924A8A942CDCB3E000096976 /* KMPReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		924A8A9E2CDCB3E000096976 /* KMPReactNativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPReactNativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 				928E09D32CDF2381005DAB06 /* Compose */,
 				924A8AF72CDCB7AC00096976 /* Support */,
 				924A8AE92CDCB49200096976 /* ContentView.swift */,
+				92185BE72CE4C37200054600 /* AllTabView.swift */,
 				92B449EC2CDE2FEC00668656 /* ShipAdditionalScreen.swift */,
 				924A8AEB2CDCB49200096976 /* KMPReactNativeApp.swift */,
 				924A8AF42CDCB6BB00096976 /* AppDelegate.swift */,
@@ -495,6 +498,7 @@
 				924A8AED2CDCB49300096976 /* ContentView.swift in Sources */,
 				928E09D72CDF2396005DAB06 /* ComposeHomeScreenView.swift in Sources */,
 				924A8AEE2CDCB49300096976 /* KMPReactNativeApp.swift in Sources */,
+				92185BE82CE4C37200054600 /* AllTabView.swift in Sources */,
 				92B449ED2CDE2FEC00668656 /* ShipAdditionalScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

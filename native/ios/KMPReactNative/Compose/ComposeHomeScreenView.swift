@@ -36,3 +36,12 @@ struct ComposeHomeScreenView : UIViewControllerRepresentable {
         return reactNativeController
     }
 }
+
+struct HelloComposeView : UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        HomeScreenControllerKt.HelloComposeViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+    }
+}

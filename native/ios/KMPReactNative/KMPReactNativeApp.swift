@@ -35,7 +35,7 @@ struct KMPReactNativeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AllTabView()
                 .environmentObject(flutterDependencies)
         }
     }
