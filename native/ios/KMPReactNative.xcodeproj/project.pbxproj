@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B3EFFC3895D6A31BBFE96D8 /* libPods-KMPReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84574F2EDC89559F6A758AA /* libPods-KMPReactNative.a */; };
 		8CBD68ABF3258E0CF8D93B19 /* libPods-KMPReactNative-KMPReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B15376788CFE75D285C7C5 /* libPods-KMPReactNative-KMPReactNativeTests.a */; };
+		92185BE62CE4C10900054600 /* FlutterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92185BE52CE4C10900054600 /* FlutterView.swift */; };
 		924A8AE42CDCB49200096976 /* KMPReactNativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE12CDCB49200096976 /* KMPReactNativeUITests.swift */; };
 		924A8AE52CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE22CDCB49200096976 /* KMPReactNativeUITestsLaunchTests.swift */; };
 		924A8AED2CDCB49300096976 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924A8AE92CDCB49200096976 /* ContentView.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		206FD9B91D697715E663172A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ../../PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6E5539C9907D73805C52FBA6 /* Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-KMPReactNative-KMPReactNativeTests/Pods-KMPReactNative-KMPReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		92185BE52CE4C10900054600 /* FlutterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterView.swift; sourceTree = "<group>"; };
 		924A8A832CDCB3DF00096976 /* KMPReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMPReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924A8A942CDCB3E000096976 /* KMPReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		924A8A9E2CDCB3E000096976 /* KMPReactNativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPReactNativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		92185BE32CE4C0EC00054600 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				92185BE52CE4C10900054600 /* FlutterView.swift */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
 		924A8A7A2CDCB3DF00096976 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 			children = (
 				924A8AFB2CDCBECB00096976 /* Info.plist */,
 				924A8AE72CDCB49200096976 /* Preview Content */,
+				92185BE32CE4C0EC00054600 /* Flutter */,
 				924A8AF62CDCB79F00096976 /* React */,
 				928E09D32CDF2381005DAB06 /* Compose */,
 				924A8AF72CDCB7AC00096976 /* Support */,
@@ -478,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92185BE62CE4C10900054600 /* FlutterView.swift in Sources */,
 				924A8AF52CDCB6BB00096976 /* AppDelegate.swift in Sources */,
 				924A8AF92CDCB83A00096976 /* ReactNativeView.swift in Sources */,
 				924A8AED2CDCB49300096976 /* ContentView.swift in Sources */,
@@ -587,10 +599,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../node_modules/react-native";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -658,10 +667,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../node_modules/react-native";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				USE_HERMES = true;

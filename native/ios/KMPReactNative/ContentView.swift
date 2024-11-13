@@ -21,6 +21,11 @@ struct ContentView: View {
                     Text("Go to React Native")
                 })
                 NavigationLink(destination: {
+                    FlutterView()
+                }, label: {
+                    Text("Go to Flutter")
+                })
+                NavigationLink(destination: {
                     ShipAdditionalScreen()
                 }, label: {
                     Text("Native Ship Additional")
