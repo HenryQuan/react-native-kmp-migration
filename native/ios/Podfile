@@ -9,6 +9,10 @@ require Pod::Executable.execute_command("node", ["-p",
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
+# setup flutter
+flutter_application_path = "../../flutter_module"
+load File.join(flutter_application_path, ".ios", "Flutter", "podhelper.rb")
+
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
@@ -32,6 +36,7 @@ target "KMPReactNative" do
   # use the KMP podspec
   # use_frameworks! cannot be used with React Native, so make it a static library
   pod "KmpMigration", :path => "../../kmp/migration/KmpMigration.podspec"
+  install_all_flutter_pods(flutter_application_path)
 
   target "KMPReactNativeTests" do
     inherit! :complete
@@ -46,5 +51,7 @@ target "KMPReactNative" do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    flutter_post_install(installer) if defined?(flutter_post_install)
   end
 end
