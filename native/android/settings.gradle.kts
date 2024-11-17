@@ -1,5 +1,8 @@
 import com.facebook.react.utils.windowsAwareCommandLine
 
+// fix most issues
+apply(from = "patch-all.groovy")
+
 pluginManagement {
     repositories {
         google {

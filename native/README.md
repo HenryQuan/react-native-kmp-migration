@@ -2,7 +2,7 @@
 Both Android and iOS are standalone projects acting as either a new project or an existing one. This showcases how you can use React Native or Flutter as another dependency, so it is native first. 
 This is also a great way to understand how to setup different technologies either it is React Native, Flutter, or Kotlin Multiplatform.
 
-Ensure node 18+ is used for react native to run correctly.
+Ensure node 18+ is used for react native to run correctly. I also had some issues with node on macOS because I am using nvm, I had to manually update my system path to point to my node bin, but as long as node can be found by Android Studio & Xcode, everything should build without any issues.
 
 ## Issues
 ### Android
@@ -37,11 +37,14 @@ Clearly, the React Native module doesn't run on macOS, make sure to run on an iO
 React Native also requires some additional setups in Xcode to bundle release bundle/assets. Make sure to use the following command instead of the one from the official website:
 ```
 set -x -e
-REACT_NATIVE_DIR="node_modules/react-native"
+# Xcode cannot find nvm location, have to manually fix this
+# make sure to update this correctly if you have a different node path
+export PATH=$HOME/.nvm/versions/node/v20.9.0/bin/:$PATH
+python3 "patch-react-native-xcode.py"
 WITH_ENVIRONMENT="$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh"
 REACT_NATIVE_XCODE="$REACT_NATIVE_PATH/scripts/react-native-xcode.sh"
 # the default config doesn't seem to work, use the local environment config instead
-/bin/bash -c "CONFIG_CMD='npx react-native config' $WITH_ENVIRONMENT $REACT_NATIVE_XCODE"
+/bin/zsh -c "CONFIG_CMD='npx react-native config' $WITH_ENVIRONMENT $REACT_NATIVE_XCODE"
 ```
 This may or may not needed, add it if the project doesn't build.
 

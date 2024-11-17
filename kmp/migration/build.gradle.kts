@@ -98,11 +98,4 @@ kotlin {
             }
         }
     }
-
-    tasks {
-        // build the cocoapods framework for iOS & macOS
-        val buildCocoapods by creating {
-            dependsOn(":migration:cocoapodsInstall")
-        }
-    }
 }

@@ -7,6 +7,8 @@ plugins {
     // include kmp plugins here also
     alias(kmp.plugins.kotlinx.serialization).apply(false)
     alias(kmp.plugins.kotlin.multiplatform).apply(false)
+    // make sure all plugins are applied here also, not only in the kmp project
+    alias(kmp.plugins.kotlin.cocoapods).apply(false)
     // react native plugin
     alias(libs.plugins.facebook.react).apply(false)
 }

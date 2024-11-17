@@ -32,6 +32,7 @@
             <option value="$PROJECT_DIR$/../../existing/node_modules/react-native-fast-encoder/android" />
             <option value="$PROJECT_DIR$/../../existing/node_modules/react-native-safe-area-context/android" />
             <option value="$PROJECT_DIR$/../../existing/node_modules/react-native-screens/android" />
+            <option value="$PROJECT_DIR$/../../flutter_module/.android/Flutter" />
             <option value="$PROJECT_DIR$/../../kmp/migration" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />

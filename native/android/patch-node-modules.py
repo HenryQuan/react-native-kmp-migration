@@ -48,10 +48,25 @@ def patch_react_native_screens():
                 print("Patched react-native-screens android path")
             file.write(line)
 
+def patch_react_native_safe_area_context():
+    # need to target Android SDK 34, see https://github.com/flutter/flutter/issues/153281
+    # there are many similar issues, but in the end, make sure to target Android SDK 34
+    # if AAPT: error: resource android:attr/lStar not found is triggered
+    file_path = f"{NODE_MODULES_DIR}/react-native-safe-area-context/android/build.gradle"
+    lines = _read_file(file_path)
+
+    # replace compileSdkVersion getExtOrDefault('compileSdkVersion', xx)
+    with open(file_path, "w") as file:
+        for line in lines:
+            if "compileSdkVersion getExtOrDefault('compileSdkVersion'" in line:
+                line = "    compileSdkVersion getExtOrDefault('compileSdkVersion', 34)"
+                print("Patched react-native-safe-area-context compileSdkVersion")
+            file.write(line)
 
 def main():
     patch_react_native_fast_encoder()
     patch_react_native_screens()
+    patch_react_native_safe_area_context()
 
 
 if __name__ == "__main__":
