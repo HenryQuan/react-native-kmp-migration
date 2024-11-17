@@ -1,5 +1,17 @@
 # React Native with Kotlin Multiplatform
 
+|Android|iOS|
+|---|---|
+|![Android Trinity](https://github.com/HenryQuan/react-native-kmp-migration/blob/master/screenshots/Android%20Trinity.jpg?raw=true)|![IOS Quadrinity](https://github.com/HenryQuan/react-native-kmp-migration/blob/master/screenshots/iOS%20Quadrinity.png?raw=true)|
+|Jetpack Compose|Swift UI|
+|Flutter|Compose Multiplatform|
+|React Native|React Native|
+|Common Multiplatform|Flutter|
+
+In the end, I added a bit too much to include Flutter, React Native and Compose Multiplatform side by side in a single screen. This wasn't the goal of the original plan. As mentioned below, the original plan is moving core logic to Kotlin Multiplatform to maintain both React Native (via Kotlin/JS) or any JavaScript based mobile framework (potentially) and the new native project at the same time with shared Kotlin code, definitely not using them side by side. It was fun to see them working together, but this is not practical in the real world.
+
+***
+
 This is a quick example of how you can migrate your React Native project to Kotlin Multiplatform by firstly implementing the shared logic in Kotlin using Ktor (Service), Serialization (JSON/Model) and Coroutines (Async). Many more may work, but not tested. This is heavily depending on what Meta implements in their Hermes JS engine. For example, the fetch response doesn't support streaming in Ktor 2, and a patch is required to fix this issue, see `kmp/migration-build-move.py`.
 
 After that, this shared module can be compiled to JavaScript using Kotlin/JS and imported in the existing React Native project as another package with typescript definitions. This may allow a smoother transition to Kotlin Multiplatform from the existing React Native project.
