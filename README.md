@@ -10,6 +10,8 @@
 
 In the end, I added a bit too much to include Flutter, React Native and Compose Multiplatform side by side in a single screen. This wasn't the goal of the original plan. As mentioned below, the original plan is moving core logic to Kotlin Multiplatform to maintain both React Native (via Kotlin/JS) or any JavaScript based mobile framework (potentially) and the new native project at the same time with shared Kotlin code, definitely not using them side by side. It was fun to see them working together, but this is not practical in the real world.
 
+Anyway, feel free to try it out yourself [here](https://github.com/HenryQuan/react-native-kmp-migration/releases/tag/1.0-final). The iOS version is almost perfect, while you may see some delays with Flutter views on Android.
+
 ***
 
 This is a quick example of how you can migrate your React Native project to Kotlin Multiplatform by firstly implementing the shared logic in Kotlin using Ktor (Service), Serialization (JSON/Model) and Coroutines (Async). Many more may work, but not tested. This is heavily depending on what Meta implements in their Hermes JS engine. For example, the fetch response doesn't support streaming in Ktor 2, and a patch is required to fix this issue, see `kmp/migration-build-move.py`.
