@@ -12,3 +12,9 @@ xcuserdata/
 build/
 Pods/
 .xcode.env*
+
+# react native
+main.jsbundle
+assets/
+output/
+__pycache__/
