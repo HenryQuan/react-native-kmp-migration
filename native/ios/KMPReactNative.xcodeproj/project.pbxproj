@@ -225,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 924A8AA82CDCB3E000096976 /* Build configuration list for PBXNativeTarget "KMPReactNative" */;
 			buildPhases = (
+				922826762CE9AC0100E41A38 /* Run script to deal with React Native */,
 				7EA712E420E596EDE616F09C /* [CP] Check Pods Manifest.lock */,
 				247748D06A89182FE3219648 /* [CP-User] Run Flutter Build flutter_module Script */,
 				924A8A7F2CDCB3DF00096976 /* Sources */,
@@ -469,6 +470,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		922826762CE9AC0100E41A38 /* Run script to deal with React Native */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run script to deal with React Native";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd ../../existing && npm i\ncd ../flutter_module && flutter pub get\ncd ../native/ios\n# this one also syncs cocoapod\npython3 \"patch_fast_encoder.py\"\n# fix the react native bundler for release if needed\npython3 \"patch-react-native-xcode.py\"\n\n";
+		};
 		929BD8482CE5F43F00FAA973 /* Bundle React Native */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,7 +504,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -x -e\n\n# Xcode cannot find nvm location, have to manually fix this\nexport PATH=$HOME/.nvm/versions/node/v20.9.0/bin/:$PATH\npython3 \"patch-react-native-xcode.py\"\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n# the default config doesn't seem to work, use the local environment config instead\n/bin/zsh -c \"CONFIG_CMD='npx react-native config' $WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+			shellScript = "set -x -e\n\n# Xcode cannot find nvm location, have to manually fix this\nexport PATH=$HOME/.nvm/versions/node/v20.9.0/bin/:$PATH\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n# the default config doesn't seem to work, use the local environment config instead\n/bin/zsh -c \"CONFIG_CMD='npx react-native config' $WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
 		CA4D08256FB48944C17BBE87 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
