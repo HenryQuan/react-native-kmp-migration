@@ -12,7 +12,7 @@ plugins {
 kotlin {
     // This will be used in React Native
     js {
-        moduleName = "kmp-migration"
+        outputModuleName.set("kmp-migration")
         binaries.executable()
         generateTypeScriptDefinitions()
         nodejs()
@@ -20,7 +20,6 @@ kotlin {
     }
     // Android and iOS using the same code
     jvm {
-        withJava()
         testRuns.named("test") {
             executionTask.configure {
                 useJUnitPlatform()
@@ -47,7 +46,7 @@ kotlin {
         summary = "KMP Migration"
         homepage = "https://github.com/HenryQuan/react-native-kmp-migration"
         name = "KmpMigration"
-        ios.deploymentTarget = "14.0"
+        ios.deploymentTarget = "15.0"
         framework {
             baseName = "KmpMigration" // the name of the framework
             isStatic = true // avoid dynamic framework
