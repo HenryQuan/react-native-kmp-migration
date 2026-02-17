@@ -47,7 +47,7 @@ kotlin {
         summary = "KMP Migration"
         homepage = "https://github.com/HenryQuan/react-native-kmp-migration"
         name = "KmpMigration"
-        ios.deploymentTarget = "14.0"
+        ios.deploymentTarget = "15.0"
         framework {
             baseName = "KmpMigration" // the name of the framework
             isStatic = true // avoid dynamic framework

@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "org.github.henryquan.nativeandroidkmp"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "org.github.henryquan.nativeandroidkmp"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 2
         versionName = "1.1"
 
