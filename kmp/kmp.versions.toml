@@ -6,7 +6,7 @@ coroutines = "1.9.0"
 
 # compose
 compose-version = "1.7.3"
-androidx-lifecycle = "2.8.7"
+androidx-lifecycle = "2.8.3"
 
 [libraries]
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }

@@ -12,7 +12,7 @@ plugins {
 kotlin {
     // This will be used in React Native
     js {
-        moduleName = "kmp-migration"
+        outputModuleName.set("kmp-migration")
         binaries.executable()
         generateTypeScriptDefinitions()
         nodejs()
@@ -20,7 +20,6 @@ kotlin {
     }
     // Android and iOS using the same code
     jvm {
-        withJava()
         testRuns.named("test") {
             executionTask.configure {
                 useJUnitPlatform()
